@@ -1,39 +1,49 @@
-import React from "react";
-// import './Navbar.css'
-import Link from 'next/link';
-import {useState} from 'react';
+import { Link } from 'react-scroll';
+import { makeStyles } from '@material-ui/styles';
+
+// const useStyles = makeStyles({
+//   navbar: {
+//     width: '100%',
+//     height: '5rem',
+//     position: '-webkit-sticky', /* Safari */
+//     position: 'sticky',
+//     top: 0,
+//     overflow: 'hidden',
+//   }, 
+//   nav: {
+//     height: '100%'
+//   },
+//   ul: {
+//     margin: '10px auto',
+//     padding: 0,
+//     listStyle: 'none',
+//     display: 'flex',
+//     alignItems: 'center',
+//     justifyContent: 'flex-end'
+//   }
+// });
 
 const Navbar = () => {
-  const [colorChange, setColorChange] = useState(false);
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 140) {
-      setColorChange(true);
-    } else {
-      setColorChange(false);
-    }
-  }
-
-  window.addEventListener('scroll', changeNavbarColor);
-
-  return (
+  // const classes = useStyles()
+  return(
     <div className="navbar">
       <nav>
         <ul>
           <li>
-            <Link className={colorChange ? 'navbar colorChange' : 'navbar original'} href='/main' scroll='true'>HOME</Link>
+            <Link className="navbar original" activeClass="active" to='main' spy={true} smooth={true} offset={-70} duration={500}>HOME</Link>
           </li>
           <li>
-            <Link className={colorChange ? 'navbar colorChange' : 'navbar original'}  href='/projects' scroll='true'>PROJECTS</Link>
+            <Link className="navbar original" activeClass="active" to='projects' spy={true} smooth={true} offset={-70} duration={500}>PROJECTS</Link>
           </li>
           <li>
-            <Link className={colorChange ? 'navbar colorChange' : 'navbar original'}  href='/career' scroll='true'>CAREER</Link>
+            <Link className="navbar original" activeClass="active" to='career' spy={true} smooth={true} offset={-70} duration={500}>CAREER</Link>
           </li>
           <li>
-            <Link className={colorChange ? 'navbar colorChange' : 'navbar original'}  href='/skills' scroll='true'>SKILLS</Link>
+            <Link className="navbar original" activeClass="active" to='skills' spy={true} smooth={true} offset={-70} duration={500}>SKILLS</Link>
           </li>
         </ul>
       </nav>
-    </div>   
+    </div>
   );
 }
 

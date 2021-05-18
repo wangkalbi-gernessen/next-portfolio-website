@@ -1,15 +1,22 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Navbar from '../components/Navbar';
+import Main from '../components/Main';
+import Projects from '../components/Projects';
+import Career from '../components/Career';
+import Skills from '../components/Skills';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <h1>Hello World</h1>
-    // <div>
-      // <Main />
-      // <Projects />
-      // <Career />
-      // <Skills />
-    // </div>
+    <div className="app">
+      <Navbar />
+      <Main />
+      <Projects />
+      <Career />
+      <Skills />
+      <Footer />
+    </div>
   )
 }

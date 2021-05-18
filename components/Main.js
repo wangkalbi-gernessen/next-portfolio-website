@@ -1,10 +1,4 @@
-import React from "react";
-// import './home.css';
-import github from '../img/github.png';
-import email from '../img/email.png';
-import call from '../img/call.png';
-import facebook from '../img/facebook.png';
-import instagram from '../img/instagram.png';
+import Image from 'next/image';
 
 const Main = () => {
   return (
@@ -14,19 +8,19 @@ const Main = () => {
         <h1 className="name">Kazunobu Someya</h1>
         <p className="contactIcon">
           <a href="https://github.com/wangkalbi-gernessen" target="_blank">
-            <img src={github} />
+            <Image src="/github.png" width={60} height={60} />
           </a>
           <a href="mailto: guizhou08chishui@gmail.com" target="_blank">
-            <img src={email}/>
+            <Image src="/email.png" width={60} height={60} />
           </a>
           <a href="tel: 778-689-7760" target="_blank">
-            <img src={call}/>
+            <Image src="/call.png" width={60} height={60} />
           </a>
           <a href="https://www.facebook.com/kazunobu.someya" target="_blank">
-            <img src={facebook}/>
+            <Image src="/facebook.png" width={60} height={60} />
           </a>
           <a href="https://www.instagram.com/kazukeks/" target="_blank">
-            <img src={instagram}/>
+            <Image src="/instagram.png" width={60} height={60} />
           </a>
         </p>
       </div>
