@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/styles';
 const useStyles = makeStyles({
   mainContent: {
     width: "100%",
-    heigth: "100vh",
+    height: "100vh",
     color: "#ffffff",
     overflow: "hidden"
   },

@@ -1,5 +1,10 @@
 import { makeStyles } from '@material-ui/styles';
-import Image from 'next/image';
+import { IconButton, Typography } from '@material-ui/core';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import EmailIcon from '@material-ui/icons/Email';
+import CallIcon from '@material-ui/icons/Call';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 const useStyles = makeStyles({
   footer: {
@@ -10,19 +15,26 @@ const useStyles = makeStyles({
     display: 'flex',
     position: 'relative',
     marginTop: '150px', 
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    backgroundColor: "#fff"
   },
   copyright: {
-    width: '20%',
+    width: '40%',
     textAlign: 'center',
     margin: 'auto'
-  }, 
-  icons: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-    width: '80%'
   },
+  icons: {
+    width: '60%',
+    padding: "20px"
+  },
+  images: {
+    width: "50px",
+    height: "50px",
+    '&:hover': {
+      backgroundColor: "#33BFDB",
+      borderRadius: "50%"
+    }
+  }
 });
 
 const Footer = () => {
@@ -30,24 +42,24 @@ const Footer = () => {
   return (
     <div className={classes.footer}>
       <div className={classes.copyright}>
-        <span>&#169;2021 Kazunobu Someya</span>
+        <Typography variant="h5">&#169;2021 Kazunobu Someya</Typography>
       </div>
       <div className={classes.icons}>
-        <a href="https://github.com/wangkalbi-gernessen" target="_blank">
-          <Image src="/github.png" width={60} height={60} />
-        </a>
-        <a href="mailto: guizhou08chishui@gmail.com" target="_blank">
-          <Image src="/email.png" width={60} height={60} />
-        </a>
-        <a href="tel: 778-689-7760" target="_blank">
-          <Image src="/call.png" width={60} height={60} />
-        </a>
-        <a href="https://www.facebook.com/kazunobu.someya" target="_blank">
-          <Image src="/facebook.png" width={60} height={60} />
-        </a>
-        <a href="https://www.instagram.com/kazukeks/" target="_blank">
-          <Image src="/instagram.png" width={60} height={60} />
-        </a>
+        <IconButton href="https://github.com/wangkalbi-gernessen" target="_blank">
+          <GitHubIcon className={classes.images} />
+        </IconButton>
+        <IconButton href={`mailto: guizhou08chishui@gmail.com`} target="_blank" >
+          <EmailIcon className={classes.images} />
+        </IconButton>
+        <IconButton href={`tel: 778-689-7760`} target="_blank" >
+          <CallIcon className={classes.images} />
+        </IconButton>
+        <IconButton href="https://www.facebook.com/kazunobu.someya" target="_blank" >
+          <FacebookIcon className={classes.images} />
+        </IconButton>
+        <IconButton href="https://www.instagram.com/kazukeks/" target="_blank">
+          <InstagramIcon className={classes.images} />
+        </IconButton>
       </div>
     </div>
   )
