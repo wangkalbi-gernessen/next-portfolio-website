@@ -77,51 +77,9 @@ background-size: 1800% 1800%;
   cursor: pointer;
 }
 
-.main-content {
-  width: 100%;
-  height: 100vh;
-  color: #ffffff;
-  overflow: hidden;
-}
-
-.introduction {
-  padding-top: 100px;
-  padding-bottom: 50px;
-  margin: auto;
-  width: 80%;
-}
-
-.position {
-  font-family: "Droid Serif","Helvetica Neue", Helvetica, Arial,sans-serif;
-  font-style: italic;
-  line-height: 22px;
-  text-align: center;
-  font-size: 22px;
-}
-
-.name {
-  text-transform: uppercase;
-  font-size: 70px;
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 25px;
-  line-height: 50px; 
-}
-
-.contactIcon {
-  margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;   
-  width: 80%;
-}
-
 .contactIcon a {
   border-radius: 50%;
 }
-
 
 .projects-content {
   width: 100%;
@@ -171,10 +129,102 @@ background-size: 1800% 1800%;
 
 .career-content {
   width: 100%;
-  height: 100vh;
-  background-color: aqua;
+  height: 100%;
+  background-color:#ffffff;
   overflow: hidden;
+  padding-bottom: 100px;
 }
+
+.careers {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  margin: auto;
+}
+
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  margin-left: -1.5px;
+  background-color: #f1f1f1;
+}
+
+.timeline > li {
+  position: relative;
+  margin-bottom: 100px;
+  min-height: 170px;
+}
+
+.timeline > li:before, 
+.timeline > li:after {
+  content: " ";
+  display: table;
+} 
+
+.timeline > li .timeline-image {
+  z-index: 100;
+  position: absolute;
+  left: 50%;
+  width: 170px;
+  height: 170px;
+  margin-left: -85px;
+  border: 7px solid #f1f1f1;
+  border-radius: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: #33BFDB;
+}
+
+.timeline > li .timeline-panel {
+  float: left;
+  position: relative;
+  width: 41%;
+  padding: 0 20px 20px 100px;
+  text-align: right;
+} 
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+  padding: 0 20px 0 100px;
+  text-align: left;
+}
+
+.timeline > li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline>li .timeline-image h4 {
+  margin-top: 12px;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.timeline > li .timeline-image h4 {
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  color: inherit;
+  margin-top: 40px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
 
 
 .skills-content {
@@ -235,28 +285,3 @@ h1 {
 .html {width: 90%; background-color: #2196F3; height: 30px; border-radius: 20px;} 
 .css {width: 90%; background-color: #2196F3; height: 30px; border-radius: 20px;} 
 .swift {width: 70%; background-color: #2196F3; height: 30px; border-radius: 20px;} 
-
-.footer {
-width: 100%;
-bottom: 0;
-right: 0;
-height: 100px;
-overflow: hidden;
-display: flex;
-position: relative;
-margin-top: 150px;  
-justify-content: flex-start;
-}
-
-.copyright {
-width: 20%;
-text-align: center;
-margin: auto;
-}
-
-.icons {
-display: flex;
-align-items: center;
-justify-content: space-evenly;   
-width: 80%;
-}

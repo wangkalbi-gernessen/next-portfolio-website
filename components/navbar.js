@@ -7,8 +7,8 @@ import { makeStyles } from '@material-ui/styles';
 //     height: '5rem',
 //     position: '-webkit-sticky', /* Safari */
 //     position: 'sticky',
-//     top: 0,
 //     overflow: 'hidden',
+//     top: 0,
 //   }, 
 //   nav: {
 //     height: '100%'

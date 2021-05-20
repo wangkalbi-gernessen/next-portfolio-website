@@ -1,12 +1,55 @@
 import Image from 'next/image';
+// import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles({
+  mainContent: {
+    width: "100%",
+    heigth: "100vh",
+    color: "#ffffff",
+    overflow: "hidden"
+  },
+  introduction: {
+    paddingTop: "100px",
+    paddingBottom: "50px",
+    margin: "auto",
+    width: "80%"
+  },
+  position: {
+    fontFamily: "Helvetice Neue Droid Serif  Helvetica Arial sans-serif",
+    fontSize: "40px",
+    lineHeight: "22px",
+    textAlign: "center",
+    fontStyle: "italic"
+  },
+  name: {
+    textTransform: "uppercase",
+    fontSize: "70px",
+    textAlign: "center",
+    fontWeight: "700",
+    marginBottom: "25px",
+    lineHeight: "50px"  
+  },
+  contactIcon: {
+    marginTop: "100px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-evenly",   
+    width: "80%"
+  }
+});
 
 const Main = () => {
+  const classes = useStyles();
   return (
-    <div className="main-content" id="main">
-      <div className="introduction">
-        <h1 className="position">Web Software Developer</h1>
-        <h1 className="name">Kazunobu Someya</h1>
-        <p className="contactIcon">
+    <div className={classes.mainContent} id="main">
+      <div className={classes.introduction}>
+        {/* <Typography variant="h1" align="center" className={classes.position}>Web Software Developer</Typography> */}
+        <h1 className={classes.position}>Web Software Developer</h1>
+        <h1 className={classes.name}>Kazunobu Someya</h1>
+        <p className={classes.contactIcon}>
           <a href="https://github.com/wangkalbi-gernessen" target="_blank">
             <Image src="/github.png" width={60} height={60} />
           </a>

@@ -1,37 +1,38 @@
-// import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/styles';
 import Image from 'next/image';
 
-// const useStyles = makeStyles({
-//   footer: {
-//     width: '100%',
-//     bottom: 0,
-//     right: 0,
-//     height: '100%',
-//     display: 'flex',
-//     position: 'relative',
-//     marginTop: '150px', 
-//     justifyContent: 'flex-start'
-//   },
-//   copyright: {
-//     width: '20%',
-//     textAlign: 'center',
-//     margin: 'auto'
-//   }, 
-//   icons: {
-//     display: 'flex',
-//     alignItems: 'center',
-//     justifyContent: 'space-evenly',
-//     width: '80%'
-//   },
-// });
+const useStyles = makeStyles({
+  footer: {
+    width: '100%',
+    bottom: 0,
+    right: 0,
+    height: '100%',
+    display: 'flex',
+    position: 'relative',
+    marginTop: '150px', 
+    justifyContent: 'flex-start'
+  },
+  copyright: {
+    width: '20%',
+    textAlign: 'center',
+    margin: 'auto'
+  }, 
+  icons: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    width: '80%'
+  },
+});
 
 const Footer = () => {
+  const classes = useStyles();
   return (
-    <div className="footer">
-      <div className="copyright">
+    <div className={classes.footer}>
+      <div className={classes.copyright}>
         <span>&#169;2021 Kazunobu Someya</span>
       </div>
-      <div className="icons">
+      <div className={classes.icons}>
         <a href="https://github.com/wangkalbi-gernessen" target="_blank">
           <Image src="/github.png" width={60} height={60} />
         </a>
