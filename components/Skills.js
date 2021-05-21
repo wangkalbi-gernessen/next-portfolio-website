@@ -3,13 +3,12 @@ import { makeStyles, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
   content: {
-    margin: "10px",
+    // margin: "10px",
     height: "100vh",
     width: "100%",
     backgroundColor: "#fff"
   },
   title: {
-    fontSize: "45px",
     fontWeight: "700"
   }, 
   chart: {
@@ -18,7 +17,9 @@ const useStyles = makeStyles({
     backgroundColor: "white",
     padding: "20px",
     height: "100%",
-    overflow: "scroll"
+    overflow: "scroll",
+    border: "1px solid gray",
+    boxShadow: "1px 1px gray"
   },
   language: {
     width: "100%",
@@ -28,8 +29,11 @@ const useStyles = makeStyles({
     marginBottom: "20px"
   }, 
   languageIcon: {
-    width: "10%"
+    width: "10%",
   }, 
+  images: {
+    zIndex: "1"
+  },
   container: {
     width: "90%",
     backgroundColor: "#ddd",
@@ -41,11 +45,12 @@ const Skills = () => {
   const classes = useStyles();
   return (
     <div className={classes.content} id="skills">
-      <Typography align="center"  gutterBottom="true" variant="h1" className={classes.title}>Skills</Typography>
+      <Typography align="center"  gutterBottom="true" variant="h2" className={classes.title}>Skills</Typography>
       <div className={classes.chart}>
+        <Typography align="center" variant="h5" gutterBottom="true">Web Technologies</Typography>
         <div className={classes.language}>
           <div className={classes.languageIcon}>
-            <Image src="/javascript.png" width={30} height={30}/>
+            <Image src="/javascript.png" width={30} height={30} className={classes.images}/>
           </div> 
           <div className={classes.container}>
             <div className="skills javascript">80%</div>
@@ -99,6 +104,7 @@ const Skills = () => {
             <div className="skills css">90%</div>
           </div>
         </div>
+        <Typography align="center" variant="h5" gutterBottom="true">Mobile Technologies</Typography>
         <div className={classes.language}>
           <div className={classes.languageIcon}>
             <Image src="/swift.png" width={30} height={30}/>

@@ -1,20 +1,36 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Typography } from '@material-ui/core';
 import Image from 'next/image';
 
 const useStyles = makeStyles({
+  content: {
+    width: "100%",
+    height: "100%",
+    backgroundColor:"#ffffff",
+    overflow: "hidden",
+    paddingBottom: "100px"
+  },
+  title: {
+    fontWeight: 700
+  },
   imageSize: {
     borderRadius: "50%"
+  },
+  careers: {
+    position: "relative",
+    minHeight: "1px",
+    paddingLeft: "15px",
+    paddingRight: "15px",
+    width: "100%",
+    margin: "auto"
   }
 });
 
-
 const Career = () => {
   const classes = useStyles();
-
   return (
-    <div className="career-content" id="career">
-      <h1>My Tech Career</h1>
-      <div className="careers">
+    <div className={classes.content} id="career">
+      <Typography variant="h2" align="center" className={classes.title}>My Tech Career</Typography>
+      <div className={classes.careers}>
         <ul className="timeline">
           <li>
             <div className="timeline-image">

@@ -1,13 +1,28 @@
-import Image from 'next/image';
-// import Typography from '@material-ui/core/Typography';
+// import Image from 'next/image';
 import { makeStyles } from '@material-ui/styles';
+import { IconButton, Typography } from '@material-ui/core';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import EmailIcon from '@material-ui/icons/Email';
+import CallIcon from '@material-ui/icons/Call';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import zIndex from '@material-ui/core/styles/zIndex';
 
 const useStyles = makeStyles({
   mainContent: {
     width: "100%",
     height: "100vh",
-    color: "#ffffff",
-    overflow: "hidden"
+    overflow: "hidden",
+    // backgroundColor: "linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3)",
+    // backgroundSize: "1800% 1800%",
+    // WebkitAnimation: "rainbow 18s ease infinite",
+    // zAnimation: "rainbow 18s ease infinite", 
+    // oAnimation: "rainbow 18s ease infinite",
+    // animation: "ranbow 18s ease infinite",
+    // "@-webkit-keyframes rainbow": {
+
+    // }
   },
   introduction: {
     paddingTop: "100px",
@@ -20,7 +35,8 @@ const useStyles = makeStyles({
     fontSize: "40px",
     lineHeight: "22px",
     textAlign: "center",
-    fontStyle: "italic"
+    fontStyle: "italic",
+    marginBottom: "40px"
   },
   name: {
     textTransform: "uppercase",
@@ -38,6 +54,15 @@ const useStyles = makeStyles({
     alignItems: "center",
     justifyContent: "space-evenly",   
     width: "80%"
+  }, 
+  images: {
+    fontSize: "50px",
+    color: "white",
+    zIndex: "100",
+    '&:hover': {
+      backgroundColor: "black",
+      borderRadius: "50%"
+    }
   }
 });
 
@@ -46,25 +71,27 @@ const Main = () => {
   return (
     <div className={classes.mainContent} id="main">
       <div className={classes.introduction}>
-        {/* <Typography variant="h1" align="center" className={classes.position}>Web Software Developer</Typography> */}
-        <h1 className={classes.position}>Web Software Developer</h1>
-        <h1 className={classes.name}>Kazunobu Someya</h1>
+        <Typography className={classes.position}>Web Software Developer</Typography>
+        <Typography className={classes.name}>Kazunobu Someya</Typography>
         <p className={classes.contactIcon}>
-          <a href="https://github.com/wangkalbi-gernessen" target="_blank">
-            <Image src="/github.png" width={60} height={60} />
-          </a>
-          <a href="mailto: guizhou08chishui@gmail.com" target="_blank">
-            <Image src="/email.png" width={60} height={60} />
-          </a>
-          <a href="tel: 778-689-7760" target="_blank">
-            <Image src="/call.png" width={60} height={60} />
-          </a>
-          <a href="https://www.facebook.com/kazunobu.someya" target="_blank">
-            <Image src="/facebook.png" width={60} height={60} />
-          </a>
-          <a href="https://www.instagram.com/kazukeks/" target="_blank">
-            <Image src="/instagram.png" width={60} height={60} />
-          </a>
+          <IconButton href="https://github.com/wangkalbi-gernessen" target="_blank">
+            <GitHubIcon className={classes.images} fontSize="large" />
+          </IconButton>
+          <IconButton href="https://www.linkedin.com/in/kazunobu-someya-6b44901b6/" target="_blank">
+            <LinkedInIcon className={classes.images} />
+          </IconButton>
+          <IconButton href={`mailto: guizhou08chishui@gmail.com`} target="_blank" >
+            <EmailIcon className={classes.images} />
+          </IconButton>
+          <IconButton href={`tel: 778-689-7760`} target="_blank" >
+            <CallIcon className={classes.images} />
+          </IconButton>
+          <IconButton href="https://www.facebook.com/kazunobu.someya" target="_blank" >
+            <FacebookIcon className={classes.images} />
+          </IconButton>
+          <IconButton href="https://www.instagram.com/kazukeks/" target="_blank">
+            <InstagramIcon className={classes.images} />
+          </IconButton>
         </p>
       </div>
     </div>   
