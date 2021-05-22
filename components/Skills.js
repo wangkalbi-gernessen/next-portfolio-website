@@ -61,7 +61,7 @@ const Skills = () => {
             <Image src="/react.png" width={30} height={30}/>
           </div> 
           <div className={classes.container}>
-            <div className="skills react">70%</div>
+            <div className="skills react">80%</div>
           </div>
         </div>
         <div className={classes.language}>
@@ -74,10 +74,18 @@ const Skills = () => {
         </div>
         <div className={classes.language}>
           <div className={classes.languageIcon}>
+            <Image src="/mysql.png" width={30} height={40}/>
+          </div> 
+          <div className={classes.container}>
+            <div className="skills mysql">60%</div>
+          </div>
+        </div>
+        <div className={classes.language}>
+          <div className={classes.languageIcon}>
             <Image src="/java.png" width={30} height={30}/>
           </div> 
           <div className={classes.container}>
-            <div className="skills java">50%</div>
+            <div className="skills java">70%</div>
           </div>
         </div>
         <div className={classes.language}>
@@ -85,7 +93,7 @@ const Skills = () => {
             <Image src="/python.png" width={30} height={30}/>
           </div> 
           <div className={classes.container}>
-            <div className="skills python">50%</div>
+            <div className="skills python">70%</div>
           </div>
         </div>
         <div className={classes.language}>
@@ -110,7 +118,15 @@ const Skills = () => {
             <Image src="/swift.png" width={30} height={30}/>
           </div> 
           <div className={classes.container}>
-            <div className="skills swift">70%</div>
+            <div className="skills swift">80%</div>
+          </div>
+        </div>
+        <div className={classes.language}>
+          <div className={classes.languageIcon}>
+            <Image src="/c.png" width={30} height={30}/>
+          </div> 
+          <div className={classes.container}>
+            <div className="skills objective-c">60%</div>
           </div>
         </div>
       </div> 

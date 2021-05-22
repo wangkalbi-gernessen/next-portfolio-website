@@ -39,7 +39,7 @@ const Career = () => {
             <div className="timeline-panel">
               <div className="timeline-heading">
                 <h4>2018 August - 2018 November</h4>
-                <h4>Framgia Cebu</h4>
+                <h4>Framgia Cebu (Cebu, Philippines)</h4>
               </div>
               <div className="timeline-body">
                 <p>I worked with Framgia as PHP developer.</p>
@@ -53,7 +53,7 @@ const Career = () => {
             <div className="timeline-panel">
               <div className="timeline-heading">
                 <h4>2018 December - 2020 March</h4>
-                <h4>RailLink Co.,Ltd</h4>
+                <h4>RailLink Co.,Ltd (Tokyo, Japan)</h4>
               </div>
               <div className="timeline-body">
                 <p>I worked with RailLink as JavaScript developer.</p>
@@ -67,7 +67,7 @@ const Career = () => {
             <div className="timeline-panel">
               <div className="timeline-heading">
                 <h4>2020 September - Present</h4>
-                <h4>Cornerstone </h4>
+                <h4>Cornerstone International Community College of Canada (Vancouver, BC, Canada)  </h4>
               </div>
               <div className="timeline-body">
                 <p>I study Swift.</p>

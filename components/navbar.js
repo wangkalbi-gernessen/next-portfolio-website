@@ -86,12 +86,11 @@ const Navbar = () => {
 
       <nav className={classes.nav}>
         <Avatar className={classes.avatar}> 
-          <HomeIcon />
+          <Link className={classes.original} activeClass="active" to='main' spy={true} smooth={true} offset={-70} duration={500}>
+            <HomeIcon />
+          </Link>
         </Avatar>
         <ul className={classes.ul}>
-          <li>
-            <Link className={classes.original} activeClass="active" to='main' spy={true} smooth={true} offset={-70} duration={500}>HOME</Link>
-          </li>
           <li>
             <Link className={classes.original}activeClass="active" to='projects' spy={true} smooth={true} offset={-70} duration={500}>PROJECTS</Link>
           </li>
