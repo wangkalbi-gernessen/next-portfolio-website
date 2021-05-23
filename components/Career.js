@@ -6,8 +6,7 @@ const useStyles = makeStyles({
     width: "100%",
     height: "100%",
     backgroundColor:"#ffffff",
-    overflow: "hidden",
-    paddingBottom: "100px"
+    padding: "50px"
   },
   title: {
     fontWeight: 700
@@ -42,7 +41,7 @@ const Career = () => {
                 <h4>Framgia Cebu (Cebu, Philippines)</h4>
               </div>
               <div className="timeline-body">
-                <p>I worked with Framgia as PHP developer.</p>
+                <p>I participated in a project for 5 months. The first project was developing a web application to manage questionnaires to the company using PHP, MySQL and Docker.</p>
               </div>
             </div>
           </li>
@@ -56,7 +55,7 @@ const Career = () => {
                 <h4>RailLink Co.,Ltd (Tokyo, Japan)</h4>
               </div>
               <div className="timeline-body">
-                <p>I worked with RailLink as JavaScript developer.</p>
+                <p>RailLink is various website publisher in Japan. My role was client-side optimization of an existing system to register customer's insurance policy for Indian clients. For one and half year, I worked with a team of 10 System Engineers using HTML5, CSS3,  JavaScript and the company’s own framework,  mainly tested the system and performed user testing and troubleshooting.</p>
               </div>
             </div>
           </li>
@@ -70,7 +69,7 @@ const Career = () => {
                 <h4>Cornerstone International Community College of Canada (Vancouver, BC, Canada)  </h4>
               </div>
               <div className="timeline-body">
-                <p>I study Swift.</p>
+                <p>I studied web and mobile software development for 1 years. The curriculum was mainly fundamental programming languages for developments and data structure. 1st year : learned knowledge of fundamental programming.</p>
               </div>
             </div>
           </li>

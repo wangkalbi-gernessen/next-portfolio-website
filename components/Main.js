@@ -7,22 +7,13 @@ import EmailIcon from '@material-ui/icons/Email';
 import CallIcon from '@material-ui/icons/Call';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import zIndex from '@material-ui/core/styles/zIndex';
 
 const useStyles = makeStyles({
   mainContent: {
     width: "100%",
-    height: "100vh",
-    overflow: "hidden",
-    // backgroundColor: "linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3)",
-    // backgroundSize: "1800% 1800%",
-    // WebkitAnimation: "rainbow 18s ease infinite",
-    // zAnimation: "rainbow 18s ease infinite", 
-    // oAnimation: "rainbow 18s ease infinite",
-    // animation: "ranbow 18s ease infinite",
-    // "@-webkit-keyframes rainbow": {
-
-    // }
+    height: "87vh",
+    margin: 0,
+    padding: 0, 
   },
   introduction: {
     paddingTop: "100px",

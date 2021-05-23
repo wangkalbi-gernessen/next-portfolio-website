@@ -3,10 +3,10 @@ import { makeStyles, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles({
   content: {
-    // margin: "10px",
-    height: "100vh",
+    height: "100%",
     width: "100%",
-    backgroundColor: "#fff"
+    backgroundColor: "#fff",
+    padding: "50px"
   },
   title: {
     fontWeight: "700"
@@ -17,7 +17,6 @@ const useStyles = makeStyles({
     backgroundColor: "white",
     padding: "20px",
     height: "100%",
-    overflow: "scroll",
     border: "1px solid gray",
     boxShadow: "1px 1px gray"
   },

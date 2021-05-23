@@ -15,7 +15,6 @@ const useStyles = makeStyles({
     height: '100%',
     display: 'flex',
     position: 'relative',
-    marginTop: '150px', 
     justifyContent: 'flex-start',
     backgroundColor: "#fff"
   },

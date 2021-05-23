@@ -7,19 +7,16 @@ import Projects from '../components/Projects';
 import Career from '../components/Career';
 import Skills from '../components/Skills';
 import Footer from '../components/Footer';
-// import { BrowserRouter as Router } from 'react-router-dom';
 
 export default function Home() {
   return (
     <div className="app">
-      {/* <Router> */}
-        <Navbar />
-        <Main />
-        <Projects />
-        <Career />
-        <Skills />
-        <Footer />
-      {/* </Router> */}
+      <Navbar />
+      <Main />
+      <Projects />
+      <Career />
+      <Skills />
+      <Footer />
     </div>
   )
 }
