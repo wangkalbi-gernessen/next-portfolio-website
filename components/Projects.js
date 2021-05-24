@@ -2,6 +2,7 @@ import { CardActions, CardContent, CardHeader, CardMedia, Container, makeStyles,
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import {useState} from 'react';
+import Image from 'next/image';
 
 const useStyles = makeStyles({
   content: {
@@ -14,8 +15,13 @@ const useStyles = makeStyles({
     fontWeight: "700"
   },
   images: {
-    width: "100px",
-    height: "100px"
+    width: "100%",
+    height: "120px"
+  },
+  buttonsLocation: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
   },
   modal: {
     display: "flex",
@@ -23,11 +29,12 @@ const useStyles = makeStyles({
     justifyContent: "center"
   },
   paper: {
-    width: "100%",
-    height: "100%",
-    boxShadow: "5px 10px red",
+    width: "70%",
+    height: "70%",
+    overflow: "scroll",
+    boxShadow: "1px 1px gray",
     backgroundColor: "white",
-    border: "2px solid #000"
+    border: "1px solid black"
   }
 });
 
@@ -58,14 +65,15 @@ const Projects = () => {
   const classes = useStyles();
 
   const webs = [
-    {id: 1, title: "Black Jack", content: "This is Java project.", source: "GitHub", sourceHref: "ihttps://github.com/YumiMachino/Group1_BlackJack", detail: "Detail", image: "/c.png"},
-    {id: 2, title: "First German Delivery System", content: "This is PHP project.", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/FirstGermanDeliverySystem", detail: "Detail", image: "/css.png"},
-    {id: 3, title: "Omikuji", content: "This is JavaScript project.", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/JavaScript_Omikuji", detail: "Detail", image: "/c.png"},
+    {id: 1, title: "Black Jack", content: "Java project.", source: "GitHub", sourceHref: "https://github.com/YumiMachino/Group1_BlackJack", detail: "Detail", image: "/blackjack.png", language: "Java", library: "JavaFX", picture1: "/blackjack_one.png", picture2: "/blackjack_two.png", picture3: "/blackjack_three.png", description: "Black Jack is card game app. I’ve joined Black Jack project from the very beginning and helped launching the app. My responsibility is developing and maintaining the apps using Java and JavaFX. also code reviewing."
+    },
+    {id: 2, title: "First German Delivery System", content: "PHP & SQL project.", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/FirstGermanDeliverySystem", detail: "Detail", image: "/css.png", language: "PHP, MySQL", library: "", picture1: "/todolist_one.png", picture2: "/todolist_two.png", picture3: "/todolist_three.png", description: "This app is my own project."},
+    {id: 3, title: "Omikuji", content: "JavaScript project.", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/JavaScript_Omikuji", detail: "Detail", image: "/c.png", language: "JavaScript", library: "", picture1: "/todolist_one.png", picture2: "/todolist_two.png", picture3: "/todolist_three.png", description: "This app is my own project."},
   ];
 
   const mobiles = [
-    {id: 1, title: "Recipe and Calorie Manager App", content: "This is iOS project.", source: "GitHub", sourceHref: "https://github.com/Chihori-Suzuki/Recipe-and-Calorie-Manager-App", detail: "Detail", image: "/css.png"},
-    {id: 2, title: "First German Delivery System", content: "This is PHP project.", source: "GitHub", sourceHref: "https://github.com/Chihori-Suzuki/Recipe-and-Calorie-Manager-App", detail: "Detail", image: "/c.png"},
+    {id: 1, title: "Recipe and Calorie Manager App", content: "iOS project.", source: "GitHub", sourceHref: "https://github.com/Chihori-Suzuki/Recipe-and-Calorie-Manager-App", detail: "Detail", image: "/calorieProj.png", language: "Swift", library: "UIKit", picture1: "/calorie_one.png",picture2: "/calorie_two.png", picture3: "/calorie_three.png",description: "Recipe and Calorie Manager App is iOS app to research nutrition facts and user’s BMI by inputting ingredients and a meal. I’ve joined Recipe and Calorie Manager App project from the very beginning and helped launching the app. My responsibility is developing and maintaining the apps using Swift and UIKit. also code reviewing."},
+    {id: 2, title: "To Do List", content: "iOS project.", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/ToDoList", detail: "Detail", image: "/todolist.png", language: "Swift", library: "UIKit, CoreData", picture1: "/todolist_one.png", picture2: "/todolist_two.png", picture3: "/todolist_three.png",description: "This app is my own project. This app is that any users can add, edit and delete what to do. The feature is the app enables users to select priority of something to do.."},
   ];
 
   return (
@@ -77,12 +85,12 @@ const Projects = () => {
         <Grid item xs={4} id={web.id} style={{marginBottom: "30px"}}>
           <Card>
             <CardMedia image={web.image} className={classes.images} />
-            <CardHeader title={web.title} />
+            <CardHeader title={web.title} style={{textAlign: "center"}} />
             <CardContent>
-              <Typography>{web.content}</Typography>
+              <Typography style={{textAlign: "center"}}>{web.content}</Typography>
             </CardContent>
-            <CardActions>
-              <Button href={web.sourceHref} size="large" variant="contained">{web.source}</Button>
+            <CardActions className={classes.buttonsLocation}>
+              <Button href={web.sourceHref} size="large" variant="contained" target="_blank">{web.source}</Button>
               <Button size="large" variant="contained" onClick={() => webHandleOpen(web)}>{web.detail}</Button>
             </CardActions>
           </Card>
@@ -90,23 +98,33 @@ const Projects = () => {
         ))}
         <Modal open={open} onClose={webHandleClose} className={classes.modal}>
         <Container className={classes.paper}>
-          <Typography>{selectedProject && selectedProject.title}</Typography>
-          <Button onClick={webHandleClose} variant="contained" color="secondary">Close window</Button>
+          <Typography variant="h4" align="center" gutterBottom="true">{selectedProject && selectedProject.title}</Typography>
+          <Typography align="center" gutterBottom="true">Development language: {selectedProject && selectedProject.language}</Typography>
+          <Typography align="center" gutterBottom="true">Using library: {selectedProject && selectedProject.library}</Typography>
+          <Container style={{display: "flex", alignItems: "center", justifyContent: "space-evenly", margin: "50px 50px"}}>
+            <Image src={selectedProject && selectedProject.picture1} width={200} height={300} />
+            <Image src={selectedProject && selectedProject.picture2} width={200} height={300} />
+            <Image src={selectedProject && selectedProject.picture3} width={200} height={300} />
+          </Container>
+          <Typography align="center" gutterBottom="true" style={{margin: "50px 50px"}}>{selectedProject && selectedProject.description}</Typography>
+          <Container style={{textAlign: "center", marginBottom: "50px", marginTop: "50px"}}>
+            <Button onClick={mobileHandleClose} variant="contained" color="secondary">Close window</Button>
+          </Container>
         </Container>
       </Modal>
       </Grid>
       <Typography align="center" gutterBottom="true" variants="h1" style={{fontSize:"45px", textDecoration: "underline", marginTop: "100px"}}>Mobile Projects</Typography>
       <Grid container spacing={3} direction="row" justify="evenly-between" alignItems="center">
         { mobiles.map ((mobile) => (
-        <Grid item xs={4}>
+        <Grid item xs={4} id={mobile.id} style={{marginBottom: "30px"}}>
           <Card>
-            <CardMedia image={mobile.image} className={classes.images} />
-            <CardHeader title={mobile.title} />
+            <CardMedia image={mobile.image} className={classes.images}/>
+            <CardHeader title={mobile.title} style={{textAlign: "center"}}/>
             <CardContent>
-              <Typography>{mobile.content}</Typography>
+              <Typography style={{textAlign: "center"}}>{mobile.content}</Typography>
             </CardContent>
-            <CardActions>
-              <Button href={mobile.sourceHref} size="large" variant="contained">{mobile.source}</Button>
+            <CardActions className={classes.buttonsLocation}>
+              <Button href={mobile.sourceHref} size="large" variant="contained" target="_blank">{mobile.source}</Button>
               <Button size="large" variant="contained" onClick={() => mobileHandleOpen(mobile)}>{mobile.detail}</Button>
             </CardActions>
           </Card>
@@ -114,8 +132,18 @@ const Projects = () => {
         ))}
         <Modal open={open} onClose={mobileHandleClose} className={classes.modal}>
         <Container className={classes.paper}>
-          <Typography>{selectedProject && selectedProject.title}</Typography>
-          <Button onClick={mobileHandleClose} variant="contained" color="secondary">Close window</Button>
+          <Typography variant="h4" align="center" gutterBottom="true">{selectedProject && selectedProject.title}</Typography>
+          <Typography align="center" gutterBottom="true">Development language: {selectedProject && selectedProject.language}</Typography>
+          <Typography align="center" gutterBottom="true">Using library: {selectedProject && selectedProject.library}</Typography>
+          <Container style={{display: "flex", alignItems: "center", justifyContent: "space-evenly", margin: "50px 50px"}}>
+            <Image src={selectedProject && selectedProject.picture1} width={100} height={300} />
+            <Image src={selectedProject && selectedProject.picture2} width={100} height={300} />
+            <Image src={selectedProject && selectedProject.picture3} width={100} height={300} />
+          </Container>
+          <Typography align="center" gutterBottom="true" style={{margin: "50px 50px"}}>{selectedProject && selectedProject.description}</Typography>
+          <Container style={{textAlign: "center", marginBottom: "50px", marginTop: "50px"}}>
+            <Button onClick={mobileHandleClose} variant="contained" color="secondary">Close window</Button>
+          </Container>
         </Container>
       </Modal>
       </Grid>

@@ -65,6 +65,14 @@ const Skills = () => {
         </div>
         <div className={classes.language}>
           <div className={classes.languageIcon}>
+            <Image src="/nextjs.png" width={30} height={30}/>
+          </div> 
+          <div className={classes.container}>
+            <div className="skills next">80%</div>
+          </div>
+        </div>
+        <div className={classes.language}>
+          <div className={classes.languageIcon}>
             <Image src="/php.png" width={30} height={40}/>
           </div> 
           <div className={classes.container}>
@@ -126,6 +134,23 @@ const Skills = () => {
           </div> 
           <div className={classes.container}>
             <div className="skills objective-c">60%</div>
+          </div>
+        </div>
+        <Typography align="center" variant="h5" gutterBottom="true">Others</Typography>
+        <div className={classes.language}>
+          <div className={classes.languageIcon}>
+            <Image src="/github.png" width={30} height={30}/>
+          </div> 
+          <div className={classes.container}>
+            <div className="skills github">85%</div>
+          </div>
+        </div>
+        <div className={classes.language}>
+          <div className={classes.languageIcon}>
+            <Image src="/docker.png" width={30} height={30}/>
+          </div> 
+          <div className={classes.container}>
+            <div className="skills docker">50%</div>
           </div>
         </div>
       </div> 
