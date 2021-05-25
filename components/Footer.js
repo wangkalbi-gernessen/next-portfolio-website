@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/styles';
-import { IconButton, Typography } from '@material-ui/core';
+import { IconButton, Typography, Grid } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
@@ -19,12 +19,12 @@ const useStyles = makeStyles({
     backgroundColor: "#fff"
   },
   copyright: {
-    width: '40%',
+    width: '25%',
     textAlign: 'center',
     margin: 'auto'
   },
   icons: {
-    width: '60%',
+    width: '75%',
     padding: "20px"
   },
   images: {
@@ -40,11 +40,11 @@ const useStyles = makeStyles({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <div className={classes.footer}>
-      <div className={classes.copyright}>
-        <Typography variant="h5">&#169;2021 Kazunobu Someya</Typography>
-      </div>
-      <div className={classes.icons}>
+    <Grid container justify="center" alignItems="center" direction="row" className={classes.footer}>
+      <Grid item className={classes.copyright}>
+        <Typography variant="h5" align="center">&#169;2021 Kazunobu Someya</Typography>
+      </Grid>
+      <Grid container justify="center" alignItems="center" direction="row" className={classes.icons}>
         <IconButton href="https://github.com/wangkalbi-gernessen" target="_blank">
           <GitHubIcon className={classes.images} />
         </IconButton>
@@ -63,8 +63,8 @@ const Footer = () => {
         <IconButton href="https://www.instagram.com/kazukeks/" target="_blank">
           <InstagramIcon className={classes.images} />
         </IconButton>
-      </div>
-    </div>
+      </Grid>
+    </Grid>
   )
 }
 

@@ -1,4 +1,4 @@
-import { makeStyles, Typography } from '@material-ui/core';
+import { Container, makeStyles, Typography } from '@material-ui/core';
 import Image from 'next/image';
 
 const useStyles = makeStyles({
@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 const Career = () => {
   const classes = useStyles();
   return (
-    <div className={classes.content} id="career">
+    <Container className={classes.content} id="career">
       <Typography variant="h2" align="center" className={classes.title}>My Tech Career</Typography>
       <div className={classes.careers}>
         <ul className="timeline">
@@ -86,7 +86,7 @@ const Career = () => {
           </li>
         </ul>
       </div>
-    </div>   
+    </Container>   
   );
 }
 

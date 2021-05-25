@@ -1,19 +1,20 @@
 import Image from 'next/image';
-import { makeStyles, Typography } from '@material-ui/core';
+import { makeStyles, Typography, Grid } from '@material-ui/core';
 
 const useStyles = makeStyles({
   content: {
     height: "100%",
     width: "100%",
     backgroundColor: "#fff",
-    padding: "50px"
+    padding: 0,
+    margin: 0
   },
   title: {
     fontWeight: "700"
   }, 
   chart: {
     margin: "auto",
-    width: "50%",
+    width: "60%",
     backgroundColor: "white",
     padding: "20px",
     height: "100%",
@@ -43,7 +44,7 @@ const useStyles = makeStyles({
 const Skills = () => {
   const classes = useStyles();
   return (
-    <div className={classes.content} id="skills">
+    <Grid container direction="column" justify="center" alignItems="center"className={classes.content} id="skills">
       <Typography align="center"  gutterBottom="true" variant="h2" className={classes.title}>Skills</Typography>
       <div className={classes.chart}>
         <Typography align="center" variant="h5" gutterBottom="true">Web Technologies</Typography>
@@ -154,7 +155,7 @@ const Skills = () => {
           </div>
         </div>
       </div> 
-    </div>     
+    </Grid>     
   );
 }
 
