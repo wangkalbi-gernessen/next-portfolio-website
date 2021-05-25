@@ -70,7 +70,7 @@ animation: rainbow 30s ease infinite;
   float: left;
   position: relative;
   width: 41%;
-  padding: 0 20px 20px 100px;
+  padding: 150px 5px 5px 0;
   text-align: right;
 } 
 
@@ -80,7 +80,7 @@ animation: rainbow 30s ease infinite;
 
 .timeline > li.timeline-inverted > .timeline-panel {
   float: right;
-  padding: 0 20px 0 100px;
+  padding: 150px 0 5px 5px;
   text-align: left;
 }
 
