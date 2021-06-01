@@ -63,13 +63,12 @@ const Projects = () => {
   const webs = [
     {id: 1, title: "Black Jack", content: "Java project.", source: "GitHub", sourceHref: "https://github.com/YumiMachino/Group1_BlackJack", detail: "Detail", image: "/blackjack.png", language: "Java", library: "JavaFX", picture1: "/blackjack_one.png", picture2: "/blackjack_two.png", description: "Black Jack is card game app. I’ve joined Black Jack project from the very beginning and helped launching the app. My responsibility is developing and maintaining the apps using Java and JavaFX. also code reviewing."
     },
-    {id: 2, title: "First German Delivery System", content: "PHP & SQL project.", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/FirstGermanDeliverySystem", detail: "Detail", image: "/css.png", language: "PHP, MySQL", library: "", picture1: "/todolist_one.png", picture2: "/todolist_two.png", description: "This app is my own project."},
-    {id: 3, title: "Omikuji", content: "JavaScript project.", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/JavaScript_Omikuji", detail: "Detail", image: "/c.png", language: "JavaScript", library: "", picture1: "/todolist_one.png", picture2: "/todolist_two.png", description: "This app is my own project."},
+    {id: 2, title: "First German Delivery System", content: "PHP & SQL project.", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/FirstGermanDeliverySystem", detail: "Detail", image: "/css.png", language: "PHP, MySQL", library: "", picture1: "/todolist_one.png", picture2: "/todolist_two.png", description: "This app is my own project."}
   ];
 
   const mobiles = [
     {id: 1, title: "Recipe and Calorie Manager App", content: "iOS project.", source: "GitHub", sourceHref: "https://github.com/Chihori-Suzuki/Recipe-and-Calorie-Manager-App", detail: "Detail", image: "/calorieProj.png", language: "Swift", library: "UIKit", picture1: "/calorie_one.png",picture2: "/calorie_two.png", description: "Recipe and Calorie Manager App is iOS app to research nutrition facts and user’s BMI by inputting ingredients and a meal. I’ve joined Recipe and Calorie Manager App project from the very beginning and helped launching the app. My responsibility is developing and maintaining the apps using Swift and UIKit. also code reviewing."},
-    {id: 2, title: "To Do List", content: "iOS project.", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/ToDoList", detail: "Detail", image: "/todolist.png", language: "Swift", library: "UIKit, CoreData", picture1: "/todolist_one.png", picture2: "/todolist_two.png", description: "This app is my own project. This app is that any users can add, edit and delete what to do. The feature is the app enables users to select priority of something to do.."},
+    {id: 2, title: "To Do List", content: "iOS project.", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/ToDoList", detail: "Detail", image: "/todolist.png", language: "Swift", library: "UIKit, CoreData", picture1: "/todolist_one.png", picture2: "/todolist_two.png", description: "This app is my own project. This app is that any users can add, edit and delete what to do. The feature is the app enables users to select priority of something to do.."}
   ];
 
   return (
@@ -77,9 +76,9 @@ const Projects = () => {
       <Typography align="center" gutterBottom="true" variant="h2" className={classes.title}>PROJECTS</Typography>
       <Typography align="center" gutterBottom="true" variants="h2" style={{fontSize:"45px", textDecoration: "underline"}}>Web Projects</Typography>
       {/* Web project area */}
-      <Grid container spacing={3} direction="row" justify="evenly-between" alignItems="flex-start">
+      <Grid container spacing={16}  justify="space-evenly">
         { webs.map ((web) => (
-        <Grid item xs={4} id={web.id} style={{marginBottom: "30px"}}>
+        <Grid item xs={12} sm={6} md={3} lg={3} id={web.id} style={{marginBottom: "30px"}}>
           <Card>
             <CardMedia image={web.image} className={classes.images} />
             <CardHeader title={web.title} style={{textAlign: "center"}} />
@@ -113,9 +112,9 @@ const Projects = () => {
       </Grid>
       {/* Mobile project area */}
       <Typography align="center" gutterBottom="true" variants="h1" style={{fontSize:"45px", textDecoration: "underline", marginTop: "100px"}}>Mobile Projects</Typography>
-      <Grid container spacing={3} direction="row" justify="evenly-between" alignItems="flex-start">
+      <Grid container spacing={16}  justify="space-evenly">
         { mobiles.map ((mobile) => (
-        <Grid item xs={4} id={mobile.id} style={{marginBottom: "30px"}}>
+        <Grid item xs={12} sm={6} md={3} lg={3} id={mobile.id} style={{marginBottom: "30px"}}>
           <Card>
             <CardMedia image={mobile.image} className={classes.images}/>
             <CardHeader title={mobile.title} style={{textAlign: "center"}}/>

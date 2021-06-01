@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   }, 
   chart: {
     margin: "auto",
-    width: "60%",
+    width: "80%",
     backgroundColor: "white",
     padding: "20px",
     height: "100%",
