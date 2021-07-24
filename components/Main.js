@@ -9,8 +9,10 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 
 const useStyles = makeStyles({
   mainContent: {
-    width: "100%",
-    height: "100vh"
+    minWidth: "100%",
+    minHeight: "100vh",
+    padding: 0,
+    margin: 0
   },
   position: {
     fontFamily: "Helvetice Neue Droid Serif  Helvetica Arial sans-serif",
