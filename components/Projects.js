@@ -73,7 +73,7 @@ const Projects = () => {
 
   return (
     <Container className={classes.content} id="projects">
-      <Typography align="center" gutterBottom="true" variant="h2" className={classes.title}>PROJECTS</Typography>
+      <Typography align="center" gutterBottom="true" variant="h3" className={classes.title}>PROJECTS</Typography>
       <Typography align="center" gutterBottom="true" variants="h2" style={{fontSize:"45px", textDecoration: "underline"}}>Web Projects</Typography>
       {/* Web project area */}
       <Grid container spacing={16}  justify="space-evenly">
