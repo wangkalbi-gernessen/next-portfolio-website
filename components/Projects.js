@@ -6,10 +6,11 @@ import Image from 'next/image';
 
 const useStyles = makeStyles({
   content: {
-    width: "100%",
-    height: "100%",
+    minWidth: "100%",
+    minHeight: "100vh",
     backgroundColor: "white",
-    margin: 0
+    margin: 0,
+    padding: 0
   },
   title: {
     fontWeight: "700"
@@ -18,7 +19,6 @@ const useStyles = makeStyles({
     width: "100%",
     height: "120px"
   },
-
   modal: {
     display: "flex",
     alignItems: "center",

@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/styles';
-import { IconButton, Typography, Grid } from '@material-ui/core';
+import { Container, IconButton, Typography, Grid } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
@@ -22,9 +22,8 @@ const useStyles = makeStyles({
   },
   name: {
     textTransform: "uppercase",
-    fontSize: "70px",
     fontWeight: "700",
-    marginBottom: "25px",
+    margin: "25px"
   },
   contactIcon: {
     marginTop: "100px",
@@ -44,13 +43,9 @@ const useStyles = makeStyles({
 const Main = () => {
   const classes = useStyles();
   return (
-    <Grid container justify="center" alignItems="center" direction="column" className={classes.mainContent} id="main">
-      <Grid item>
-        <Typography className={classes.position} align="center">Web Software Developer</Typography>
-      </Grid>
-      <Grid item>
-        <Typography className={classes.name} align="center">Kazunobu Someya</Typography>
-      </Grid>
+    <Container className={classes.mainContent} id="main">
+      <Typography className={classes.position} align="center">Web Software Developer</Typography>
+      <Typography className={classes.name} align="center" variant="h3">Kazunobu Someya</Typography>
       <Grid container justify="center" alignItems="center" direction="row" className={classes.contactIcon}>
         <IconButton href="https://github.com/wangkalbi-gernessen" target="_blank">
           <GitHubIcon className={classes.images} fontSize="large" />
@@ -71,7 +66,7 @@ const Main = () => {
           <InstagramIcon className={classes.images} />
         </IconButton>
       </Grid>
-    </Grid>   
+    </Container>   
   );
 }
 
