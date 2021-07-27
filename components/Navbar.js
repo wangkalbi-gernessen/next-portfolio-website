@@ -69,22 +69,16 @@ const Navbar = () => {
       <AppBar position="static" style={{background: "transparent"}}>
         <Toolbar>
           <Tabs indicatorColor="secondary">
-            <Tab>
-              <Avatar className={classes.avatar}> 
+            <Tab component={Link} to="main" className={classes.original} activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="HOME">
+              {/* <Avatar className={classes.avatar}> 
                 <Link className={classes.original} activeClass="active" to='main' spy={true} smooth={true} offset={-70} duration={500}>
                   <HomeIcon />
                 </Link>
-              </Avatar>
+              </Avatar> */}
             </Tab>
-            <Tab>
-              <Link className={classes.original}activeClass="active" to='projects' spy={true} smooth={true} offset={-70} duration={500}>PROJECTS</Link>
-            </Tab>
-            <Tab>
-              <Link className={classes.original} activeClass="active" to='career' spy={true} smooth={true} offset={-70} duration={500}>CAREER</Link>
-            </Tab>
-            <Tab>
-              <Link className={classes.original} activeClass="active" to='skills' spy={true} smooth={true} offset={-70} duration={500}>SKILLS</Link>
-            </Tab>
+            <Tab component={Link} to="projects" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="PROJECTS"></Tab>
+            <Tab component={Link} to="career" className={classes.original} activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="CAREER"></Tab>
+            <Tab component={Link} to="skills" className={classes.original} activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="SKILLS"></Tab>
           </Tabs>          
         </Toolbar>
       </AppBar>
