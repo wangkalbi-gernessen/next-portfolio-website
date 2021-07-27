@@ -7,7 +7,7 @@ import HomeIcon from '@material-ui/icons/Home';
 const useStyles = makeStyles({
   navbar: {
     width: '100%',
-    height: '5rem',
+    // height: '5rem',
     position: '-webkit-sticky', /* Safari */
     position: 'sticky',
     top: 0,
@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   }, 
   navChange: {
     width: '100%',
-    height: '5rem',
+    // height: '5rem',
     position: '-webkit-sticky', /* Safari */
     position: 'sticky',
     top: 0,
@@ -51,6 +51,8 @@ const useStyles = makeStyles({
 const Navbar = () => {
   const classes = useStyles()
   const [colorChange, setColorChange] = useState(false);
+  const [value, setValue] = useState(1);
+
   useEffect(() => {
     const changeNavbarColor = () => {
       if (window.scrollY >= 140) {
@@ -63,12 +65,16 @@ const Navbar = () => {
 
     return () => window.addEventListener('scroll', changeNavbarColor);
   }, [colorChange]);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  }
   
   return(
     <Container className={colorChange ? classes.navChange : classes.navbar}>
-      <AppBar position="static" style={{background: "transparent"}}>
+      <AppBar position="static" style={{background: "transparent", boxShadow: "none"}}>
         <Toolbar>
-          <Tabs indicatorColor="secondary">
+          <Tabs value={value} onChange={handleChange} indicatorColor="secondary">
             <Tab component={Link} to="main" className={classes.original} activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="HOME">
               {/* <Avatar className={classes.avatar}> 
                 <Link className={classes.original} activeClass="active" to='main' spy={true} smooth={true} offset={-70} duration={500}>
