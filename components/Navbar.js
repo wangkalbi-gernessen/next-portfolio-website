@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-scroll';
 import { makeStyles } from '@material-ui/styles';
-import { Avatar } from '@material-ui/core';
+import { Container, AppBar, Avatar, Toolbar, Tabs, Tab } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 
 const useStyles = makeStyles({
@@ -11,6 +11,9 @@ const useStyles = makeStyles({
     position: '-webkit-sticky', /* Safari */
     position: 'sticky',
     top: 0,
+    margin: 0,
+    padding: 0,
+    flexGrow: 1
   }, 
   navChange: {
     width: '100%',
@@ -19,13 +22,10 @@ const useStyles = makeStyles({
     position: 'sticky',
     top: 0,
     backgroundColor: 'black',
-    zIndex: "9999"
-  },
-  nav: {
-    height: '100%',
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between"
+    zIndex: "9999",
+    margin: 0,
+    padding: 0,
+    flexGrow: 1
   },
   avatar: {
     width: "50px",
@@ -33,14 +33,6 @@ const useStyles = makeStyles({
     backgroundColor: "red",
     marginLeft: "10px"
   },
-  ul: {
-    padding: 0,
-    listStyle: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    width: "60%"
-  }, 
   original: {
     margin: "10px 1rem",
     width: "5rem",
@@ -73,26 +65,30 @@ const Navbar = () => {
   }, [colorChange]);
   
   return(
-    <div className={colorChange ? classes.navChange : classes.navbar}>
-      <nav className={classes.nav}>
-        <Avatar className={classes.avatar}> 
-          <Link className={classes.original} activeClass="active" to='main' spy={true} smooth={true} offset={-70} duration={500}>
-            <HomeIcon />
-          </Link>
-        </Avatar>
-        <ul className={classes.ul}>
-          <li>
-            <Link className={classes.original}activeClass="active" to='projects' spy={true} smooth={true} offset={-70} duration={500}>PROJECTS</Link>
-          </li>
-          <li>
-            <Link className={classes.original} activeClass="active" to='career' spy={true} smooth={true} offset={-70} duration={500}>CAREER</Link>
-          </li>
-          <li>
-            <Link className={classes.original} activeClass="active" to='skills' spy={true} smooth={true} offset={-70} duration={500}>SKILLS</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <Container className={colorChange ? classes.navChange : classes.navbar}>
+      <AppBar position="static" style={{background: "transparent"}}>
+        <Toolbar>
+          <Tabs indicatorColor="secondary">
+            <Tab>
+              <Avatar className={classes.avatar}> 
+                <Link className={classes.original} activeClass="active" to='main' spy={true} smooth={true} offset={-70} duration={500}>
+                  <HomeIcon />
+                </Link>
+              </Avatar>
+            </Tab>
+            <Tab>
+              <Link className={classes.original}activeClass="active" to='projects' spy={true} smooth={true} offset={-70} duration={500}>PROJECTS</Link>
+            </Tab>
+            <Tab>
+              <Link className={classes.original} activeClass="active" to='career' spy={true} smooth={true} offset={-70} duration={500}>CAREER</Link>
+            </Tab>
+            <Tab>
+              <Link className={classes.original} activeClass="active" to='skills' spy={true} smooth={true} offset={-70} duration={500}>SKILLS</Link>
+            </Tab>
+          </Tabs>          
+        </Toolbar>
+      </AppBar>
+    </Container>
   );
 }
 

@@ -19,8 +19,8 @@ export default function Home() {
   const classes = useStyle();
   return (
     <Container className={classes.content}>
-      <Navbar />
       <Main />
+      <Navbar />
       <Projects />
       <Career />
       <Skills />
