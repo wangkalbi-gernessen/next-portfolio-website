@@ -29,8 +29,8 @@ const Career = () => {
   return (
     <Container className={classes.content} id="career">
       <Typography variant="h2" align="center" className={classes.title}>My Tech Career</Typography>
-      <div className={classes.careers}>
-        <ul className="timeline">
+      {/* <div className={classes.careers}> */}
+        {/* <ul className="timeline">
           <li>
             <div className="timeline-image">
               <Image src="/framgia-logo.png" width={160} height={160} className={classes.imageSize} />
@@ -85,7 +85,7 @@ const Career = () => {
             </div>
           </li>
         </ul>
-      </div>
+      </div> */}
     </Container>   
   );
 }

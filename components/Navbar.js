@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-scroll';
 import { makeStyles } from '@material-ui/styles';
-import { Container, AppBar, Avatar, Toolbar, Tabs, Tab } from '@material-ui/core';
-import HomeIcon from '@material-ui/icons/Home';
+import { Container, AppBar, Toolbar, Tabs, Tab } from '@material-ui/core';
 
 const useStyles = makeStyles({
   navbar: {
     width: '100%',
-    // height: '5rem',
     position: '-webkit-sticky', /* Safari */
     position: 'sticky',
     top: 0,
@@ -17,7 +15,6 @@ const useStyles = makeStyles({
   }, 
   navChange: {
     width: '100%',
-    // height: '5rem',
     position: '-webkit-sticky', /* Safari */
     position: 'sticky',
     top: 0,
@@ -51,7 +48,7 @@ const useStyles = makeStyles({
 const Navbar = () => {
   const classes = useStyles()
   const [colorChange, setColorChange] = useState(false);
-  const [value, setValue] = useState(1);
+  const [value, setValue] = useState("0");
 
   useEffect(() => {
     const changeNavbarColor = () => {
@@ -67,6 +64,7 @@ const Navbar = () => {
   }, [colorChange]);
 
   const handleChange = (event, newValue) => {
+    console.log(newValue);
     setValue(newValue);
   }
   
@@ -75,17 +73,11 @@ const Navbar = () => {
       <AppBar position="static" style={{background: "transparent", boxShadow: "none"}}>
         <Toolbar>
           <Tabs value={value} onChange={handleChange} indicatorColor="secondary">
-            <Tab component={Link} to="main" className={classes.original} activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="HOME">
-              {/* <Avatar className={classes.avatar}> 
-                <Link className={classes.original} activeClass="active" to='main' spy={true} smooth={true} offset={-70} duration={500}>
-                  <HomeIcon />
-                </Link>
-              </Avatar> */}
-            </Tab>
-            <Tab component={Link} to="projects" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="PROJECTS"></Tab>
-            <Tab component={Link} to="career" className={classes.original} activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="CAREER"></Tab>
-            <Tab component={Link} to="skills" className={classes.original} activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="SKILLS"></Tab>
-          </Tabs>          
+            <Tab component={Link} to="main" className={classes.original} activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="HOME" value="0"/>
+            <Tab component={Link} to="aboutme" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="ABOUT ME" value="1" />
+            <Tab component={Link} to="projects" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="PROJECTS" value="2" />
+            <Tab component={Link} to="contact" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="CONTACT" value="3" />
+          </Tabs>
         </Toolbar>
       </AppBar>
     </Container>

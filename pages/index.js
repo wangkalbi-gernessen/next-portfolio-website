@@ -1,8 +1,8 @@
 import Navbar from '../components/Navbar';
 import Main from '../components/Main';
+import Aboutme from '../components/Aboutme';
 import Projects from '../components/Projects';
-import Career from '../components/Career';
-import Skills from '../components/Skills';
+import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import { Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
@@ -21,9 +21,9 @@ export default function Home() {
     <Container className={classes.content}>
       <Navbar />
       <Main />
+      <Aboutme />
       <Projects />
-      <Career />
-      <Skills />
+      <Contact />
       <Footer />
     </Container>
   )

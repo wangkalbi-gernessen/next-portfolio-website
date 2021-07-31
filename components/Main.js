@@ -35,26 +35,6 @@ const Main = () => {
     <Grid container spacing={0}direction="row" alignItems="center" justify="center" className={classes.mainContent} id="main">
       <Grid item xs={11}>
         <Typography align="center" variant="h4">Hello, I'm <span style={{color: "red"}}>Kazunobu Someya</span>.<br />I'm a full-stack web developer.</Typography>
-        <Grid container justify="center" alignItems="center" direction="row" className={classes.contactIcon}>
-          <IconButton href="https://github.com/wangkalbi-gernessen" target="_blank">
-            <GitHubIcon className={classes.images} fontSize="large" />
-          </IconButton>
-          <IconButton href="https://www.linkedin.com/in/kazunobu-someya-6b44901b6/" target="_blank">
-            <LinkedInIcon className={classes.images} />
-          </IconButton>
-          <IconButton href={`mailto: guizhou08chishui@gmail.com`} target="_blank" >
-            <EmailIcon className={classes.images} />
-          </IconButton>
-          <IconButton href={`tel: 778-689-7760`} target="_blank" >
-            <CallIcon className={classes.images} />
-          </IconButton>
-          <IconButton href="https://www.facebook.com/kazunobu.someya" target="_blank" >
-            <FacebookIcon className={classes.images} />
-          </IconButton>
-          <IconButton href="https://www.instagram.com/kazukeks/" target="_blank">
-            <InstagramIcon className={classes.images} />
-          </IconButton>
-        </Grid>
       </Grid>   
     </Grid>
   );
