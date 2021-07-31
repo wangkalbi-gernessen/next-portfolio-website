@@ -1,10 +1,11 @@
 import Image from 'next/image';
-import { makeStyles, Typography, Grid } from '@material-ui/core';
+import { makeStyles, Typography, Grid, Paper, Container } from '@material-ui/core';
+import Progressbar from './Progressbar';
 
 const useStyles = makeStyles({
   content: {
-    height: "100%",
-    width: "100%",
+    minHeight: "100vh",
+    minWidth: "100%",
     backgroundColor: "#fff",
     padding: 0,
     margin: 0
@@ -12,116 +13,55 @@ const useStyles = makeStyles({
   title: {
     fontWeight: "700"
   }, 
-  chart: {
-    margin: "auto",
-    width: "80%",
-    backgroundColor: "white",
-    padding: "20px",
-    height: "100%",
-    border: "1px solid gray",
-    boxShadow: "1px 1px gray"
-  },
-  language: {
+  skills: {
     width: "100%",
-    height: "30px", 
-    display: "flex",
-    justifyContent: "flex-start",
-    marginBottom: "20px"
-  }, 
-  languageIcon: {
-    width: "10%",
-  }, 
-  images: {
-    zIndex: "1"
+    margin: "0 auto",
   },
-  container: {
-    width: "90%",
-    backgroundColor: "#ddd",
-    borderRadius: "20px"
-  }, 
+  // languageIcon: {
+  //   width: "10%",
+  // }, 
+  // images: {
+  //   zIndex: "1"
+  // },
+  // container: {
+  //   width: "90%",
+  //   backgroundColor: "#ddd",
+  //   borderRadius: "20px"
+  // }, 
 });
 
 const Skills = () => {
   const classes = useStyles();
+  const skills = [
+    {image: "/javascript.png", progress: 80},
+    {image: "/react.png", progress: 80},
+    {image: "/nextjs.png", progress: 80},{image: "/php.png", progress: 60},
+    {image: "/mysql.png", progress: 60},
+    {image: "/java.png", progress: 70},
+    {image: "/python.png", progress: 70},{image: "/html5.png", progress: 95},{image: "/css.png", progress: 95}
+
+
+  ]
+
   return (
-    <Grid container direction="column" justify="center" alignItems="center"className={classes.content} id="skills">
-      <Typography align="center"  gutterBottom="true" variant="h2" className={classes.title}>Skills</Typography>
-      <div className={classes.chart}>
-        <Typography align="center" variant="h5" gutterBottom="true">Web Technologies</Typography>
-        <div className={classes.language}>
-          <div className={classes.languageIcon}>
-            <Image src="/javascript.png" width={30} height={30} className={classes.images}/>
-          </div> 
-          <div className={classes.container}>
-            <div className="skills javascript">80%</div>
-          </div>
-        </div>
-        <div className={classes.language}>
-          <div className={classes.languageIcon}>
-            <Image src="/react.png" width={30} height={30}/>
-          </div> 
-          <div className={classes.container}>
-            <div className="skills react">80%</div>
-          </div>
-        </div>
-        <div className={classes.language}>
-          <div className={classes.languageIcon}>
-            <Image src="/nextjs.png" width={30} height={30}/>
-          </div> 
-          <div className={classes.container}>
-            <div className="skills next">80%</div>
-          </div>
-        </div>
-        <div className={classes.language}>
-          <div className={classes.languageIcon}>
-            <Image src="/php.png" width={30} height={40}/>
-          </div> 
-          <div className={classes.container}>
-            <div className="skills php">60%</div>
-          </div>
-        </div>
-        <div className={classes.language}>
-          <div className={classes.languageIcon}>
-            <Image src="/mysql.png" width={30} height={40}/>
-          </div> 
-          <div className={classes.container}>
-            <div className="skills mysql">60%</div>
-          </div>
-        </div>
-        <div className={classes.language}>
-          <div className={classes.languageIcon}>
-            <Image src="/java.png" width={30} height={30}/>
-          </div> 
-          <div className={classes.container}>
-            <div className="skills java">70%</div>
-          </div>
-        </div>
-        <div className={classes.language}>
-          <div className={classes.languageIcon}>
-            <Image src="/python.png" width={30} height={30}/>
-          </div> 
-          <div className={classes.container}>
-            <div className="skills python">70%</div>
-          </div>
-        </div>
-        <div className={classes.language}>
-          <div className={classes.languageIcon}>
-            <Image src="/html5.png" width={30} height={30}/>
-          </div> 
-          <div className={classes.container}>
-            <div className="skills html">90%</div> 
-          </div>
-        </div>
-        <div className={classes.language}>
-          <div className={classes.languageIcon}>
-            <Image src="/css.png" width={30} height={30}/>
-          </div> 
-          <div className={classes.container}>
-            <div className="skills css">90%</div>
-          </div>
-        </div>
-        <Typography align="center" variant="h5" gutterBottom="true">Mobile Technologies</Typography>
-        <div className={classes.language}>
+    <Grid spacing={0} container direction="column" justify="center" alignItems="center"className={classes.content} id="skills">
+      <Typography align="center"  gutterBottom="true" variant="h3" className={classes.title}>Skills</Typography>
+      <Grid item xs={11} style={{margin:"30px"}}>
+        <Paper elevation={5}>
+          <Container className={classes.skills}>
+            <Typography align="center" variant="h5" gutterBottom="true" style={{paddingTop: "20px", textDecoration: "underline", fontWeight: "bold"}}>Web Technologies</Typography>
+            { skills.map((skill) => (
+            <Grid container spacing={2}>
+              <Grid item xs={2}>
+                <Image src={skill.image} width={20} height={20}/>
+              </Grid>
+              <Grid item xs={10}>
+                <Progressbar bgcolor="orange" progress={skill.progress} height={20}/>
+              </Grid>
+            </Grid>
+            ))}
+            <Typography align="center" variant="h5" gutterBottom="true" style={{paddingTop: "20px", textDecoration: "underline", fontWeight: "bold"}}>Mobile Technologies</Typography>
+        {/* <div className={classes.language}>
           <div className={classes.languageIcon}>
             <Image src="/swift.png" width={30} height={30}/>
           </div> 
@@ -136,9 +76,9 @@ const Skills = () => {
           <div className={classes.container}>
             <div className="skills objective-c">60%</div>
           </div>
-        </div>
+        </div> */}
         <Typography align="center" variant="h5" gutterBottom="true">Others</Typography>
-        <div className={classes.language}>
+        {/* <div className={classes.language}>
           <div className={classes.languageIcon}>
             <Image src="/github.png" width={30} height={30}/>
           </div> 
@@ -153,8 +93,10 @@ const Skills = () => {
           <div className={classes.container}>
             <div className="skills docker">50%</div>
           </div>
-        </div>
-      </div> 
+        </div> */}
+          </Container>
+        </Paper>
+      </Grid> 
     </Grid>     
   );
 }

@@ -28,7 +28,7 @@ const Career = () => {
   const classes = useStyles();
   return (
     <Container className={classes.content} id="career">
-      <Typography variant="h2" align="center" className={classes.title}>My Tech Career</Typography>
+      {/* <Typography variant="h2" align="center" className={classes.title}>My Tech Career</Typography> */}
       {/* <div className={classes.careers}> */}
         {/* <ul className="timeline">
           <li>

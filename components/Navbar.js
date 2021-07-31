@@ -8,7 +8,6 @@ const useStyles = makeStyles({
     width: '100%',
     position: '-webkit-sticky', /* Safari */
     position: 'sticky',
-    top: 0,
     margin: 0,
     padding: 0,
     flexGrow: 1
@@ -17,7 +16,6 @@ const useStyles = makeStyles({
     width: '100%',
     position: '-webkit-sticky', /* Safari */
     position: 'sticky',
-    top: 0,
     backgroundColor: 'black',
     zIndex: "9999",
     margin: 0,
