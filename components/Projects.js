@@ -13,7 +13,9 @@ const useStyles = makeStyles({
     padding: 0
   },
   title: {
-    fontWeight: "700"
+    fontWeight: "700",
+    paddingTop: "40px",
+    textDecoration: "underline"
   },
   images: {
     width: "100%",
@@ -74,7 +76,7 @@ const Projects = () => {
   return (
     <Container className={classes.content} id="projects">
       <Typography align="center" gutterBottom="true" variant="h3" className={classes.title}>PROJECTS</Typography>
-      <Typography align="center" gutterBottom="true" variants="h2" style={{fontSize:"45px", textDecoration: "underline"}}>Web Projects</Typography>
+      <Typography align="center" gutterBottom="true" variants="h2" style={{fontSize:"45px", textDecoration: "underline", paddingTop: "50px"}}>Web Projects</Typography>
       {/* Web project area */}
       <Grid container spacing={16}  justify="space-evenly">
         { webs.map ((web) => (

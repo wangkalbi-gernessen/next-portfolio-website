@@ -11,7 +11,8 @@ const useStyles = makeStyles({
     margin: 0
   },
   title: {
-    fontWeight: "700"
+    fontWeight: "700",
+    paddingTop: "50px"
   }, 
   skills: {
     width: "100%",
@@ -37,8 +38,6 @@ const Skills = () => {
     {image: "/github.png", progress: 85},
     {image: "/docker.png", progress: 50},
   ];
-
-
 
   return (
     <Grid spacing={0} container direction="column" justify="center" alignItems="center"className={classes.content} id="skills">

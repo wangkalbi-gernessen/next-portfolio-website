@@ -19,7 +19,7 @@ const Aboutme = () => {
   const classes = useStyle();
   return(
     <Container className={classes.content} id="aboutme">
-      <Typography align="center" variant="h4">About Me</Typography>
+      <Typography align="center" variant="h3" style={{paddingTop: "40px", fontWeight: "700", textDecoration: "underline"}}>About Me</Typography>
       <Grid container spacing={24}>
         <Grid item xs={12} sm={6}>
           <Profile/>  

@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     position: 'sticky',
     margin: 0,
     padding: 0,
+    top: 0,
     flexGrow: 1
   }, 
   navChange: {
@@ -20,6 +21,7 @@ const useStyles = makeStyles({
     zIndex: "9999",
     margin: 0,
     padding: 0,
+    top: 0,
     flexGrow: 1
   },
   avatar: {
