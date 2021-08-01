@@ -43,7 +43,7 @@ const Skills = () => {
   return (
     <Grid spacing={0} container direction="column" justify="center" alignItems="center"className={classes.content} id="skills">
       <Typography align="center"  gutterBottom="true" variant="h3" className={classes.title}>Skills</Typography>
-      <Grid item xs={11} style={{margin:"30px"}}>
+      <Grid item xs={11}>
         <Paper elevation={5}>
           <Container className={classes.skills}>
             <Typography align="center" variant="h5" gutterBottom="true" style={{paddingTop: "20px", textDecoration: "underline", fontWeight: "bold"}}>Web Technologies</Typography>

@@ -20,11 +20,11 @@ const Aboutme = () => {
   return(
     <Container className={classes.content} id="aboutme">
       <Typography align="center" variant="h4">About Me</Typography>
-      <Grid container spacing={16}>
-        <Grid item xs={14} sm={10} md={4} lg={4}>
+      <Grid container spacing={24}>
+        <Grid item xs={12} sm={6}>
           <Profile/>  
         </Grid>
-        <Grid item xs={14} sm={10} md={4} lg={4}>
+        <Grid item xs={12} sm={6}>
           <Skills/>
         </Grid>
       </Grid>
