@@ -42,7 +42,7 @@ const Main = () => {
   return (
     <Grid container spacing={0}direction="row" alignItems="center" justify="center" className={classes.mainContent} id="main">
       <Grid item xs={11}>
-        <Typography align="center" variant="h4">Hello, I'm <span style={{color: "red"}}>Kazunobu Someya</span>.<br />{text}</Typography>
+        <Typography align="center" style={{fontSize: "50px", fontWeight: 500}}>Hello, I'm <span style={{color: "red"}}>Kazunobu Someya</span>.<br /><span style={{fontSize: "30px"}}>{text}</span></Typography>
       </Grid>   
     </Grid>
   );
