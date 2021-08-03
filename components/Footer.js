@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   copyright: {
     width: '25%',
     textAlign: 'center',
-    margin: 'auto'
+    margin: 'auto',
   },
   icons: {
     width: '75%',
