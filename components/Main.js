@@ -6,6 +6,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import CallIcon from '@material-ui/icons/Call';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import { useEffect, useState } from 'react';
 
 const useStyles = makeStyles({
   mainContent: {
@@ -31,10 +32,23 @@ const useStyles = makeStyles({
 
 const Main = () => {
   const classes = useStyles();
+  const [text, setText] = useState("");
+  const [fullText, setFullText] = useState("Hello, I'm Kazunobu Someya.<br />I'm a full-stack web developer.");
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if(index < fullText.length) {
+      setTimeout(() => {
+        setText(text + fullText[index]);
+        setIndex(index + 1);
+      }, 40);
+    }
+  }, [index]);
+
   return (
     <Grid container spacing={0}direction="row" alignItems="center" justify="center" className={classes.mainContent} id="main">
       <Grid item xs={11}>
-        <Typography align="center" variant="h4">Hello, I'm <span style={{color: "red"}}>Kazunobu Someya</span>.<br />I'm a full-stack web developer.</Typography>
+        <Typography align="center" variant="h4">{text}</Typography>
       </Grid>   
     </Grid>
   );
