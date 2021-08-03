@@ -1,11 +1,5 @@
 import { makeStyles } from '@material-ui/styles';
-import { Container, IconButton, Typography, Grid } from '@material-ui/core';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import EmailIcon from '@material-ui/icons/Email';
-import CallIcon from '@material-ui/icons/Call';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
+import { Typography, Grid } from '@material-ui/core';
 import { useEffect, useState } from 'react';
 
 const useStyles = makeStyles({
@@ -33,7 +27,7 @@ const useStyles = makeStyles({
 const Main = () => {
   const classes = useStyles();
   const [text, setText] = useState("");
-  const [fullText, setFullText] = useState("Hello, I'm Kazunobu Someya.<br />I'm a full-stack web developer.");
+  const [fullText, setFullText] = useState("I'm a full-stack web developer.");
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -41,14 +35,14 @@ const Main = () => {
       setTimeout(() => {
         setText(text + fullText[index]);
         setIndex(index + 1);
-      }, 40);
+      }, 100);
     }
   }, [index]);
 
   return (
     <Grid container spacing={0}direction="row" alignItems="center" justify="center" className={classes.mainContent} id="main">
       <Grid item xs={11}>
-        <Typography align="center" variant="h4">{text}</Typography>
+        <Typography align="center" variant="h4">Hello, I'm <span style={{color: "red"}}>Kazunobu Someya</span>.<br />{text}</Typography>
       </Grid>   
     </Grid>
   );
