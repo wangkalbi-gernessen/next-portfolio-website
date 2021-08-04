@@ -48,7 +48,6 @@ const useStyles = makeStyles({
 const Navbar = () => {
   const classes = useStyles()
   const [colorChange, setColorChange] = useState(false);
-  const [value, setValue] = useState(0);
 
   useEffect(() => {
     const changeNavbarColor = () => {
@@ -62,20 +61,16 @@ const Navbar = () => {
 
     return () => window.addEventListener('scroll', changeNavbarColor);
   }, [colorChange]);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  }
   
   return(
     <Container className={colorChange ? classes.navChange : classes.navbar}>
       <AppBar position="static" style={{background: "transparent", boxShadow: "none"}}>
         <Toolbar>
-          <Tabs value={value} onChange={handleChange} indicatorColor="secondary" variant="scrollable" scrollButtons="on" textColor="secondary">
-            <Tab component={Link} to="main" className={classes.original} activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="HOME" value={0}/>
-            <Tab component={Link} to="aboutme" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="ABOUT ME" value={1} />
-            <Tab component={Link} to="projects" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="PROJECTS" value={2} />
-            <Tab component={Link} to="contact" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="CONTACT" value={3} />
+          <Tabs variant="scrollable" scrollButtons="on" textColor="secondary">
+            <Tab component={Link} to="main" className={classes.original} activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="HOME"/>
+            <Tab component={Link} to="aboutme" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="ABOUT ME" />
+            <Tab component={Link} to="projects" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="PROJECTS" />
+            <Tab component={Link} to="contact" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="CONTACT" />
           </Tabs>
         </Toolbar>
       </AppBar>
