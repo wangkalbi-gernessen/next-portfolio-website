@@ -7,7 +7,19 @@ const useStyles = makeStyles({
     minWidth: "100%",
     minHeight: "100vh",
     padding: 0,
-    margin: 0
+    margin: 0,
+    backgroundImage: "url('/vancouver_nightview.jpg')",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    animation: "shrink 5s infinite alternate steps(60)"
+  },
+  "@keyframes shrink": {
+    "0%": {
+      transform: "scale(1.0)"
+    },
+    "100%": {
+      transform: "scale(1.0)"
+    }
   },
   contactIcon: {
     marginTop: "100px",
@@ -42,7 +54,7 @@ const Main = () => {
   return (
     <Grid container spacing={0}direction="row" alignItems="center" justify="center" className={classes.mainContent} id="main">
       <Grid item xs={11}>
-        <Typography align="center" style={{fontSize: "50px", fontWeight: 500}}>Hello, I'm <span style={{color: "red"}}>Kazunobu Someya</span>.<br /><span style={{fontSize: "30px"}}>{text}</span></Typography>
+        <Typography align="center" style={{fontSize: "50px", fontWeight: 500, color: "white"}}>Hello, I'm <span style={{color: "red"}}>Kazunobu Someya</span>.<br /><span style={{fontSize: "40px"}}>{text}</span></Typography>
       </Grid>   
     </Grid>
   );

@@ -8,10 +8,13 @@ const useStyles = makeStyles({
     width: '100%',
     position: '-webkit-sticky', /* Safari */
     position: 'sticky',
+    background: "transparent",
     margin: 0,
     padding: 0,
     top: 0,
-    flexGrow: 1
+    flexGrow: 1,
+    backgroundColor: "black",
+    opacity: "0.9"
   }, 
   navChange: {
     width: '100%',

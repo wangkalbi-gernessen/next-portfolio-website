@@ -23,20 +23,20 @@ const useStyles = makeStyles({
 const Skills = () => {
   const classes = useStyles();
   const webSkills = [
-    {image: "/javascript.png", progress: 80},
-    {image: "/react.png", progress: 80},
-    {image: "/nextjs.png", progress: 80},{image: "/php.png", progress: 60},
-    {image: "/mysql.png", progress: 60},
-    {image: "/java.png", progress: 70},
-    {image: "/python.png", progress: 70},{image: "/html5.png", progress: 95},{image: "/css.png", progress: 95}
+    {image: "/Skills/javascript.png", progress: 80},
+    {image: "/Skills/react.png", progress: 80},
+    {image: "/Skills/nextjs.png", progress: 80},{image: "/Skills/php.png", progress: 60},
+    {image: "/Skills/mysql.png", progress: 60},
+    {image: "/Skills/java.png", progress: 70},
+    {image: "/Skills/python.png", progress: 70},{image: "/Skills/html5.png", progress: 95},{image: "/Skills/css.png", progress: 95}
   ];
   const mobileSkills = [
-    {image: "/swift.png", progress: 80},
-    {image: "/c.png", progress: 60},
+    {image: "/Skills/swift.png", progress: 80},
+    {image: "/Skills/c.png", progress: 60},
   ];
   const toolSkills = [
-    {image: "/github.png", progress: 85},
-    {image: "/docker.png", progress: 50},
+    {image: "/Skills/github.png", progress: 85},
+    {image: "/Skills/docker.png", progress: 50},
   ];
 
   return (
