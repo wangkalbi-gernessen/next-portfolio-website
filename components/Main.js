@@ -11,15 +11,6 @@ const useStyles = makeStyles({
     backgroundImage: "url('/vancouver_nightview.jpg')",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    animation: "shrink 5s infinite alternate steps(60)"
-  },
-  "@keyframes shrink": {
-    "0%": {
-      transform: "scale(1.0)"
-    },
-    "100%": {
-      transform: "scale(1.0)"
-    }
   },
   contactIcon: {
     marginTop: "100px",
