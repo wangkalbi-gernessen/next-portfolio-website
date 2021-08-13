@@ -4,8 +4,6 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import CallIcon from '@material-ui/icons/Call';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
 
 const useStyle = makeStyles({
   content: {
@@ -22,7 +20,7 @@ const useStyle = makeStyles({
     textDecoration: "underline"
   },
   images: {
-    fontSize: "40px"
+    fontSize: "45px"
   }
 });
 
