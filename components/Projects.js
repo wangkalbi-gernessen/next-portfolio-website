@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   },
   title: {
     fontWeight: "700",
-    paddingTop: "40px",
+    paddingTop: "45px",
     textDecoration: "underline"
   },
   images: {
