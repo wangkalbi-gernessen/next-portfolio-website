@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     margin: 0
   },
   title: {
-    fontWeight: "700",
+    fontWeight: "650",
     paddingTop: "50px"
   }, 
   skills: {
