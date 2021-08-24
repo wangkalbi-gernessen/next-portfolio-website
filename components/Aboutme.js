@@ -12,6 +12,22 @@ const useStyle = makeStyles({
     minWidth: "100%",
     minHeight: "100vh",
     background: "white"
+  },
+  title: {
+    fontWeight: "700",
+    paddingTop: "45px",
+    position: "relative",
+    zIndex: 1,
+    paddingBottom: "5px",
+    '&::after': {
+      content: "' '",
+      position: "absolute",
+      left: "50%",
+      marginLeft: "-50px",
+      bottom: 0,
+      width: "100px",
+      borderBottom: "3px solid magenta"
+    }
   }
 });
 
@@ -19,7 +35,7 @@ const Aboutme = () => {
   const classes = useStyle();
   return(
     <Container className={classes.content} id="aboutme">
-      <Typography align="center" variant="h3" style={{paddingTop: "45px", fontWeight: "700", textDecoration: "underline"}}>About Me</Typography>
+      <Typography align="center" variant="h3" className={classes.title}>About Me</Typography>
       <Grid container spacing={24}>
         <Grid item xs={12} sm={6}>
           <Profile/>  

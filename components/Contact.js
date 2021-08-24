@@ -14,10 +14,20 @@ const useStyle = makeStyles({
     background: "white"
   }, 
   title: {
-    fontWeight: 700,
-    paddingTop: "40px",
-    paddingBottom: "30px",
-    textDecoration: "underline"
+    fontWeight: "700",
+    paddingTop: "45px",
+    position: "relative",
+    zIndex: 1,
+    paddingBottom: "5px",
+    '&::after': {
+      content: "' '",
+      position: "absolute",
+      left: "50%",
+      marginLeft: "-50px",
+      bottom: 0,
+      width: "100px",
+      borderBottom: "3px solid magenta"
+    }
   },
   images: {
     fontSize: "45px"
