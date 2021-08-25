@@ -30,7 +30,12 @@ const useStyles = makeStyles({
   },
   images: {
     width: "100%",
-    height: "120px"
+    height: "150px",
+    overflow: "hidden",
+    transition: "0.5s all ease-in-out",
+    '&:hover': {
+      transform: "scale(1.2)"
+    }
   },
   modal: {
     display: "flex",
