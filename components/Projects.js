@@ -83,7 +83,7 @@ const Projects = () => {
     },
     {id: 2, title: "Black Jack", content: "Java", source: "GitHub", sourceHref: "https://github.com/YumiMachino/Black-Jack"/*, detail: "Detail"*/, image: "/blackjack.png", language: "Java", library: "JavaFX"/*, picture1: "/blackjack_one.png", picture2: "/blackjack_two.png", description: "Black Jack is card game app. I’ve joined Black Jack project from the very beginning and helped launching the app. My responsibility is developing and maintaining the apps using Java and JavaFX. also code reviewing."*/
     },
-    {id: 3, title: "First German Delivery System", content: "PHP & SQL project.", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/FirstGermanDeliverySystem"/*, detail: "Detail"*/, image: "/css.png", language: "PHP, MySQL", library: ""/*, picture1: "/todolist_one.png", picture2: "/todolist_two.png", description: "This app is my own project."},
+    {id: 3, title: "First German Delivery System", content: "PHP & SQL project.", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/FirstGermanDeliverySystem"/*, detail: "Detail"*/, image: "/css.png", language: "PHP, MySQL", /*library: "", picture1: "/todolist_one.png", picture2: "/todolist_two.png", description: "This app is my own project."},
   {id: 3, title: "Recipe and Calorie Manager", content: "React.js", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/React_Recipe_and_Calorie_Manager_App", detail: "Detail", image: "/css.png", language: "React.js", library: "", picture1: "", picture2: "", description: "This app is my own project."*/}
   ];
 
