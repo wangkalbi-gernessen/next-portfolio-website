@@ -102,7 +102,7 @@ const Projects = () => {
         <Grid item xs={12} sm={6} md={3} lg={3} id={web.id} style={{marginBottom: "30px"}}>
           <Card className={classes.webCard}>
             <CardMedia image={web.image} className={classes.images} />
-            <CardHeader title={web.title} style={{textAlign: "center"}} />
+            <CardHeader title={web.title} titleTypographyProps={{variant: "h4"}} style={{textAlign: "center"}} />
             <CardContent>
               <Typography style={{textAlign: "center"}}>{web.content}</Typography>
             </CardContent>
@@ -138,7 +138,7 @@ const Projects = () => {
         <Grid item xs={12} sm={6} md={3} lg={3} id={mobile.id} style={{marginBottom: "30px"}}>
           <Card>
             <CardMedia image={mobile.image} className={classes.images}/>
-            <CardHeader title={mobile.title} style={{textAlign: "center"}}/>
+            <CardHeader title={mobile.title} titleTypographyProps={{variant: "h4"}}  style={{textAlign: "center"}}/>
             <CardContent>
               <Typography style={{textAlign: "center"}}>{mobile.content}</Typography>
             </CardContent>
