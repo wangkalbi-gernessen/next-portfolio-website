@@ -88,8 +88,8 @@ const Projects = () => {
   ];
 
   const mobiles = [
-    {id: 1, title: "Recipe and Calorie Manager", content: "Swift, Core Data", source: "GitHub", sourceHref: "https://github.com/Chihori-Suzuki/Recipe-and-Calorie-Manager-App"/*, detail: "Detail"*/, image: "/calorieProj.png", language: "Swift", library: "UIKit"/*, picture1: "/calorie_one.png",picture2: "/calorie_two.png", description: "Recipe and Calorie Manager App is iOS app to research nutrition facts and user’s BMI by inputting ingredients and a meal. I’ve joined Recipe and Calorie Manager App project from the very beginning and helped launching the app. My responsibility is developing and maintaining the apps using Swift and UIKit. also code reviewing."*/},
-    {id: 2, title: "To Do List", content: "iOS project.", source: "Swift, Core Data", sourceHref: "https://github.com/wangkalbi-gernessen/ToDoList"/*, detail: "Detail"*/, image: "/todolist.png", language: "Swift", library: "UIKit, CoreData"/*, picture1: "/todolist_one.png", picture2: "/todolist_two.png", description: "This app is my own project. This app is that any users can add, edit and delete what to do. The feature is the app enables users to select priority of something to do.."*/}
+    {id: 1, title: "Recipe and Calorie Manager", content: "Swift, XCode, Core Data", source: "GitHub", sourceHref: "https://github.com/Chihori-Suzuki/Recipe-and-Calorie-Manager-App"/*, detail: "Detail"*/, image: "/calorieProj.png", language: "Swift", library: "UIKit"/*, picture1: "/calorie_one.png",picture2: "/calorie_two.png", description: "Recipe and Calorie Manager App is iOS app to research nutrition facts and user’s BMI by inputting ingredients and a meal. I’ve joined Recipe and Calorie Manager App project from the very beginning and helped launching the app. My responsibility is developing and maintaining the apps using Swift and UIKit. also code reviewing."*/},
+    {id: 2, title: "To Do List", content: "Swift, XCode, Core Data", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/ToDoList"/*, detail: "Detail"*/, image: "/todolist.png", language: "Swift", library: "UIKit, CoreData"/*, picture1: "/todolist_one.png", picture2: "/todolist_two.png", description: "This app is my own project. This app is that any users can add, edit and delete what to do. The feature is the app enables users to select priority of something to do.."*/}
   ];
 
   return (
@@ -104,7 +104,7 @@ const Projects = () => {
             <CardMedia image={web.image} className={classes.images} />
             <CardHeader title={web.title} titleTypographyProps={{variant: "h4"}} style={{textAlign: "center"}} />
             <CardContent>
-              <Typography style={{textAlign: "center"}}>{web.content}</Typography>
+              <Typography variant="h6" style={{textAlign: "center"}}>{web.content}</Typography>
             </CardContent>
             <CardActions>
               <Grid container direction="row" justify="space-evenly" alignItems="center" >
@@ -140,7 +140,7 @@ const Projects = () => {
             <CardMedia image={mobile.image} className={classes.images}/>
             <CardHeader title={mobile.title} titleTypographyProps={{variant: "h4"}}  style={{textAlign: "center"}}/>
             <CardContent>
-              <Typography style={{textAlign: "center"}}>{mobile.content}</Typography>
+              <Typography variant="h6" style={{textAlign: "center"}}>{mobile.content}</Typography>
             </CardContent>
             <CardActions className={classes.buttonsLocation}>
               <Grid container direction="row" justify="space-evenly" alignItems="center" >
