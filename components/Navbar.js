@@ -36,7 +36,7 @@ const useStyles = makeStyles({
   original: {
     margin: "10px 1rem",
     width: "5rem",
-    fontWeight: "600",
+    fontWeight: "700",
     backgroundColor: "transparent",
     color: "white",
     textDecoration: "none",
@@ -45,6 +45,9 @@ const useStyles = makeStyles({
       paddingBottom: "0.25rem",
       cursor: "pointer"
     }
+  }, 
+  tabLabel: {
+    fontSize: "15px"
   }
 });
 
@@ -70,10 +73,10 @@ const Navbar = () => {
       <AppBar position="static" style={{background: "transparent", boxShadow: "none"}}>
         <Toolbar>
           <Tabs variant="scrollable" scrollButtons="on" textColor="secondary">
-            <Tab component={Link} to="main" className={classes.original} activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="HOME"/>
-            <Tab component={Link} to="aboutme" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="ABOUT ME" />
-            <Tab component={Link} to="projects" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="PROJECTS" />
-            <Tab component={Link} to="contact" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label="CONTACT" />
+            <Tab component={Link} to="main" className={classes.original} activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label={<span className={classes.tabLabel}>HOME</span>}/>
+            <Tab component={Link} to="aboutme" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label={<span className={classes.tabLabel}>ABOUT ME</span>} />
+            <Tab component={Link} to="projects" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label={<span className={classes.tabLabel}>PROJECTS</span>} />
+            <Tab component={Link} to="contact" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label={<span className={classes.tabLabel}>CONTACT</span>} />
           </Tabs>
         </Toolbar>
       </AppBar>
