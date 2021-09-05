@@ -38,7 +38,7 @@ const useStyles = makeStyles({
     width: "5rem",
     fontWeight: "700",
     backgroundColor: "transparent",
-    color: "white",
+    color: "#FFFFFF",
     textDecoration: "none",
     '&:hover, &:active': {
       color: "#95bcf0",
