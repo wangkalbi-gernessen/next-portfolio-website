@@ -30,7 +30,10 @@ const useStyle = makeStyles({
     }
   },
   images: {
-    fontSize: "45px"
+    fontSize: "45px",
+    '&:hover': {
+      background: "aqua"
+    }
   }
 });
 
