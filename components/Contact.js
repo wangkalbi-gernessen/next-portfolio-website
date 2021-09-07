@@ -29,11 +29,14 @@ const useStyle = makeStyles({
       borderBottom: "3px solid magenta"
     }
   },
+  btn: { 
+    background: "#FFF",
+    '&:hover': {
+      background: "skyblue"
+    }
+  },
   images: {
     fontSize: "45px",
-    '&:hover': {
-      background: "aqua"
-    }
   }
 });
 
@@ -46,22 +49,22 @@ const Contact = () => {
       <Typography align="center" style={{fontSize: "25px"}}>How can I help you today?</Typography>
       <Grid container spacing={0}>
         <Grid item xs={6} sm={3} style={{textAlign: "center"}}>
-          <IconButton href="https://github.com/wangkalbi-gernessen" target="_blank">
+          <IconButton href="https://github.com/wangkalbi-gernessen" target="_blank" className={classes.btn}>
             <GitHubIcon className={classes.images} />
           </IconButton>
         </Grid>
         <Grid item xs={6} sm={3} style={{textAlign: "center"}}>
-          <IconButton href="https://www.linkedin.com/in/kazunobu-someya-6b44901b6/" target="_blank">
+          <IconButton href="https://www.linkedin.com/in/kazunobu-someya-6b44901b6/" target="_blank" className={classes.btn}>
             <LinkedInIcon className={classes.images} />
           </IconButton>
         </Grid>
         <Grid item xs={6} sm={3} style={{textAlign: "center"}}>
-          <IconButton href={`mailto: guizhou08chishui@gmail.com`} target="_blank" >
+          <IconButton href={`mailto: guizhou08chishui@gmail.com`} target="_blank" className={classes.btn}>
             <EmailIcon className={classes.images} />
           </IconButton>
         </Grid>
         <Grid item xs={6} sm={3} style={{textAlign: "center"}}>
-          <IconButton href={`tel: 778-689-7760`} target="_blank" >
+          <IconButton href={`tel: 778-689-7760`} target="_blank" className={classes.btn}>
             <CallIcon className={classes.images} />
           </IconButton>
         </Grid>
