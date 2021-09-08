@@ -73,7 +73,7 @@ const Main = () => {
       setTimeout(() => {
         setText(text + fullText[index]);
         setIndex(index + 1);
-      }, 100);
+      }, 80);
     }
   }, [index]);
 
