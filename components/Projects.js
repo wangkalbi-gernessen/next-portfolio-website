@@ -2,7 +2,7 @@ import { CardActions, CardContent, CardHeader, CardMedia, Container, makeStyles,
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import {useState} from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const useStyles = makeStyles({
   content: {
