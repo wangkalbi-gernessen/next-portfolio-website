@@ -1,8 +1,7 @@
-import { CardActions, CardContent, CardHeader, CardMedia, Container, makeStyles, Button, Typography, Modal } from "@material-ui/core";
+import { CardActions, CardContent, CardHeader, CardMedia, Container, makeStyles, Button, Typography } from "@material-ui/core";
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import {useState} from 'react';
-// import Image from 'next/image';
 
 const useStyles = makeStyles({
   content: {
@@ -53,28 +52,28 @@ const useStyles = makeStyles({
 });
 
 const Projects = () => {
-  const [open, setOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
+  // const [open, setOpen] = useState(false);
+  // const [selectedProject, setSelectedProject] = useState(null);
   
-  const webHandleOpen = (web) => {
-    setSelectedProject(web);
-    setOpen(true);
-  }; 
+  // const webHandleOpen = (web) => {
+  //   setSelectedProject(web);
+  //   setOpen(true);
+  // }; 
 
-  const webHandleClose = () => {
-    setSelectedProject(null);
-    setOpen(false);
-  };
+  // const webHandleClose = () => {
+  //   setSelectedProject(null);
+  //   setOpen(false);
+  // };
 
-  const mobileHandleOpen = (mobile) => {
-    setSelectedProject(mobile);
-    setOpen(true);
-  }; 
+  // const mobileHandleOpen = (mobile) => {
+  //   setSelectedProject(mobile);
+  //   setOpen(true);
+  // }; 
 
-  const mobileHandleClose = () => {
-    setSelectedProject(null);
-    setOpen(false);
-  };
+  // const mobileHandleClose = () => {
+  //   setSelectedProject(null);
+  //   setOpen(false);
+  // };
   
   const classes = useStyles();
 
