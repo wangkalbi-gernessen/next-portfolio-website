@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     top: 0,
     flexGrow: 1,
     backgroundColor: "black",
-    opacity: "0.8"
+    opacity: "0.7"
   }, 
   navChange: {
     width: '100%',
