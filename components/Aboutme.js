@@ -1,5 +1,4 @@
 import React from 'react';
-import Career from './Career';
 import { makeStyles } from '@material-ui/styles';
 import { Grid, Container, Typography } from '@material-ui/core';
 import Profile from './Profile';
@@ -44,7 +43,6 @@ const Aboutme = () => {
           <Skills/>
         </Grid>
       </Grid>
-      <Career/>
     </Container>
   );
 }
