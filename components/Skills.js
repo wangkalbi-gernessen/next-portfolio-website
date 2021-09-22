@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 const Skills = () => {
   const classes = useStyles();
   const webSkills = [
-    {image: "/Skills/javascript.png", progress: 85},
+    {image: "/Skills/javascript.png", progress: 90},
     {image: "/Skills/react.png", progress: 80},
     {image: "/Skills/nextjs.png", progress: 80},
     {image: "/Skills/php.png", progress: 70},
