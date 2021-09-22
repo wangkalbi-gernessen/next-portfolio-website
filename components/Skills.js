@@ -23,10 +23,11 @@ const useStyles = makeStyles({
 const Skills = () => {
   const classes = useStyles();
   const webSkills = [
-    {image: "/Skills/javascript.png", progress: 80},
+    {image: "/Skills/javascript.png", progress: 85},
     {image: "/Skills/react.png", progress: 80},
-    {image: "/Skills/nextjs.png", progress: 80},{image: "/Skills/php.png", progress: 60},
-    {image: "/Skills/mysql.png", progress: 60},
+    {image: "/Skills/nextjs.png", progress: 80},
+    {image: "/Skills/php.png", progress: 70},
+    {image: "/Skills/mysql.png", progress: 70},
     {image: "/Skills/java.png", progress: 70},
     {image: "/Skills/python.png", progress: 70},{image: "/Skills/html5.png", progress: 95},{image: "/Skills/css.png", progress: 95}
   ];
@@ -35,7 +36,7 @@ const Skills = () => {
     {image: "/Skills/c.png", progress: 60},
   ];
   const toolSkills = [
-    {image: "/Skills/github.png", progress: 85},
+    {image: "/Skills/github.png", progress: 90},
     {image: "/Skills/docker.png", progress: 50},
   ];
 
