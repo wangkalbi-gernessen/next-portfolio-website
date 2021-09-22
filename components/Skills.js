@@ -23,13 +23,15 @@ const useStyles = makeStyles({
 const Skills = () => {
   const classes = useStyles();
   const webSkills = [
-    {image: "/Skills/javascript.png", progress: 90},
+    {image: "/Skills/javascript.png", progress: 85},
     {image: "/Skills/react.png", progress: 80},
     {image: "/Skills/nextjs.png", progress: 80},
     {image: "/Skills/php.png", progress: 70},
     {image: "/Skills/mysql.png", progress: 70},
     {image: "/Skills/java.png", progress: 70},
-    {image: "/Skills/python.png", progress: 70},{image: "/Skills/html5.png", progress: 95},{image: "/Skills/css.png", progress: 95}
+    {image: "/Skills/python.png", progress: 70},
+    {image: "/Skills/html5.png", progress: 95},
+    {image: "/Skills/css.png", progress: 95}
   ];
   const mobileSkills = [
     {image: "/Skills/swift.png", progress: 80},
