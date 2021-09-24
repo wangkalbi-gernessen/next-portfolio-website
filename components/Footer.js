@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     paddingTop: "40px"
   },
   copyright: {
-    fontWeight: "700"w
+    fontWeight: "700"
   }
 });
 

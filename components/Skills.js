@@ -11,8 +11,8 @@ const useStyles = makeStyles({
     margin: 0
   },
   title: {
-    fontWeight: "650",
-    paddingTop: "50px"
+    fontWeight: "700",
+    paddingTop: "30px"
   }, 
   skills: {
     width: "100%",
@@ -48,7 +48,7 @@ const Skills = () => {
       <Grid item xs={11}>
         <Paper elevation={5}>
           <Container className={classes.skills}>
-            <Typography align="center" variant="h5" gutterBottom="true" style={{paddingTop: "20px", textDecoration: "underline", fontWeight: "bold"}}>Web Technologies</Typography>
+            <Typography align="center" variant="h5" gutterBottom="true" style={{paddingTop: "10px", textDecoration: "underline", fontWeight: "bold"}}>Web Technologies</Typography>
             { webSkills.map((webSkill) => (
             <Grid container spacing={2}>
               <Grid item xs={2}>
@@ -59,7 +59,7 @@ const Skills = () => {
               </Grid>
             </Grid>
             ))}
-            <Typography align="center" variant="h5" gutterBottom="true" style={{paddingTop: "20px", textDecoration: "underline", fontWeight: "bold"}}>Mobile Technologies</Typography>
+            <Typography align="center" variant="h5" gutterBottom="true" style={{paddingTop: "5px", textDecoration: "underline", fontWeight: "bold"}}>Mobile Technologies</Typography>
             { mobileSkills.map((mobileSkill) => (
             <Grid container spacing={2}>
               <Grid item xs={2}>
@@ -70,7 +70,7 @@ const Skills = () => {
               </Grid>
             </Grid>
             ))}
-            <Typography align="center" variant="h5" gutterBottom="true" style={{paddingTop: "20px", textDecoration: "underline", fontWeight: "bold"}}>Tools</Typography>
+            <Typography align="center" variant="h5" gutterBottom="true" style={{ textDecoration: "underline", fontWeight: "bold"}}>Tools</Typography>
             { toolSkills.map((toolSkill) => (
             <Grid container spacing={2}>
               <Grid item xs={2}>

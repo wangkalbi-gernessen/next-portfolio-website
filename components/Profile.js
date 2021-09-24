@@ -26,7 +26,7 @@ const Profile = () => {
   return(
     <Grid spacing={0} container direction="column" alignItems="center" justify="center" className={classes.content}>
       <Grid item xs={11}>
-        <Typography align="center" variant="h3" style={{paddingTop: "50px", fontWeight: "700"}}>Profile</Typography>
+        <Typography align="center" variant="h3" style={{paddingTop: "30px", fontWeight: "700"}}>Profile</Typography>
         <Grid container direction="column" justify="center" alignItems="center"> 
           <Grid item >
             <Container className={classes.avatar}>
