@@ -45,7 +45,7 @@ const Contact = () => {
   return(
     <Container className={classes.content} id="contact">
       <Typography variant="h3" align="center" className={classes.title}>Contact</Typography>
-      <Typography align="center" style={{fontSize: "25px", marginTop: "30px"}}>Thanks for taking your time to reach out.</Typography>
+      <Typography align="center" style={{fontSize: "25px", marginTop: "25px"}}>Thanks for taking your time to reach out.</Typography>
       <Typography align="center" style={{fontSize: "25px"}}>How can I help you today?</Typography>
       <Grid container spacing={0}>
         <Grid item xs={6} sm={3} style={{textAlign: "center"}}>
