@@ -30,7 +30,7 @@ const useStyle = makeStyles({
     }
   },
   btn: { 
-    background: "#FFF",
+    background: "#FFFFFF",
     '&:hover': {
       background: "#C9F6FF"
     }
