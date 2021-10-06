@@ -35,7 +35,7 @@ const Profile = () => {
           </Grid>
           <Grid item>
             <Typography variant="h4" align="center" gutterBottom="true">Kazunobu Someya</Typography>
-            <Typography align="center">I'm actively looking for new opportunities in web software developer. Full-stack/web developer with a background in law and a passion for modern web app development. Able to quickly learn and apply new technologies to deliver optimal results as a team member. I am eager to leverage my knowledge gained thus far and continue to grow rapidly with the support of a professional development team.</Typography>
+            <Typography align="center">I am actively looking for new opportunities in web software developer. Full-stack/web developer with a background in law and a passion for modern web app development. Able to quickly learn and apply new technologies to deliver optimal results as a team member. I am eager to leverage my knowledge gained thus far and continue to grow rapidly with the support of a professional development team.</Typography>
           </Grid>
         </Grid>  
       </Grid>
