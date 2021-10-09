@@ -29,12 +29,12 @@ const Skills = () => {
     {image: "/Skills/php.png", progress: 75},
     {image: "/Skills/mysql.png", progress: 75},
     {image: "/Skills/java.png", progress: 70},
-    {image: "/Skills/python.png", progress: 70},
+    {image: "/Skills/python.png", progress: 65},
     {image: "/Skills/html5.png", progress: 95},
     {image: "/Skills/css.png", progress: 95}
   ];
   const mobileSkills = [
-    {image: "/Skills/swift.png", progress: 80},
+    {image: "/Skills/swift.png", progress: 75},
     {image: "/Skills/c.png", progress: 60},
   ];
   const toolSkills = [
