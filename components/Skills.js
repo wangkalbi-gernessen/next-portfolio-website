@@ -35,7 +35,7 @@ const Skills = () => {
   ];
   const mobileSkills = [
     {image: "/Skills/swift.png", progress: 75},
-    {image: "/Skills/c.png", progress: 60},
+    {image: "/Skills/c.png", progress: 55},
   ];
   const toolSkills = [
     {image: "/Skills/github.png", progress: 90},
