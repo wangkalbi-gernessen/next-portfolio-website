@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     right: 0,
     height: '100%',
     position: 'relative',
-    backgroundColor: "#fff",
+    backgroundColor: "#FFFFFF",
     paddingTop: "40px"
   },
   copyright: {
