@@ -41,7 +41,7 @@ const useStyles = makeStyles({
     }
   }, 
   tabLabel: {
-    fontSize: "20px"
+    fontSize: "15px"
   }
 });
 
