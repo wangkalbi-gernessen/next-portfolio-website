@@ -25,7 +25,7 @@ const Main = () => {
       setTimeout(() => {
         setText(text + fullText[index]);
         setIndex(index + 1);
-      }, 70);
+      }, 80);
     }
   }, [index]);
 
