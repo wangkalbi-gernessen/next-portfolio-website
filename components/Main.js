@@ -32,7 +32,7 @@ const Main = () => {
   return (
     <Grid container spacing={0}direction="row" alignItems="center" justify="center" className={classes.mainContent} id="main">
       <Grid item xs={11}>
-        <Typography align="center" style={{fontSize: "50px", fontWeight: 500, color: "white"}}>Hello, I'm <span style={{color: "red"}}>Kazunobu Someya</span>.<br /><span style={{fontSize: "40px"}}>{text}</span></Typography>
+        <Typography align="center" style={{fontSize: "50px", fontWeight: 600, color: "white"}}>Hello, I'm <span style={{color: "red"}}>Kazunobu Someya</span>.<br /><span style={{fontSize: "40px"}}>{text}</span></Typography>
       </Grid>   
     </Grid>
   );
