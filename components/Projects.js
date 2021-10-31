@@ -150,21 +150,6 @@ const Projects = () => {
           </Card>
         </Grid>
         ))}
-        {/* <Modal open={open} onClose={mobileHandleClose} className={classes.modal}>
-        <Container className={classes.paper}>
-          <Typography variant="h4" align="center" gutterBottom="true">{selectedProject && selectedProject.title}</Typography>
-          <Typography align="center" gutterBottom="true">Development language: {selectedProject && selectedProject.language}</Typography>
-          <Typography align="center" gutterBottom="true">Using library: {selectedProject && selectedProject.library}</Typography>
-          <Grid container alignItems="center" justify="space-evenly" direction="row">
-            <Image src={selectedProject && selectedProject.picture1} width={100} height={300} />
-            <Image src={selectedProject && selectedProject.picture2} width={100} height={300} />
-          </Grid>
-          <Typography align="center" gutterBottom="true" style={{margin: "50px 50px"}}>{selectedProject && selectedProject.description}</Typography>
-          <Container style={{textAlign: "center", marginBottom: "50px", marginTop: "50px"}}>
-            <Button onClick={mobileHandleClose} variant="contained" color="secondary">Close window</Button>
-          </Container>
-        </Container>
-      </Modal> */}
       </Grid>
     </Container>
   );
