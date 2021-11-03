@@ -39,7 +39,7 @@ const Skills = () => {
   ];
   const toolSkills = [
     {image: "/Skills/github.png", progress: 90},
-    {image: "/Skills/docker.png", progress: 50},
+    {image: "/Skills/docker.png", progress: 55},
   ];
 
   return (
