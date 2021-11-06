@@ -14,7 +14,7 @@ const useStyle = makeStyles({
   },
   title: {
     fontWeight: "700",
-    paddingTop: "45px",
+    paddingTop: "40px",
     position: "relative",
     zIndex: 1,
     paddingBottom: "5px",
