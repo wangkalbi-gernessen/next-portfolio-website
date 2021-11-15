@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     height: '100%',
     position: 'relative',
     backgroundColor: "#FFFFFF",
-    paddingTop: "40px"
+    paddingTop: "45px"
   },
   copyright: {
     fontWeight: "700"
