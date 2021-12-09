@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/styles';
-import { Typography, Container } from '@material-ui/core';
+import { Typography, Container, Grid } from '@material-ui/core';
 
 const useStyles = makeStyles({
   footer: {
@@ -13,14 +13,16 @@ const useStyles = makeStyles({
   },
   copyright: {
     fontWeight: "700"
-  }
+  } 
 });
 
 const Footer = () => {
   const classes = useStyles();
   return (
     <Container className={classes.footer}>
-      <Typography variant="h5" align="center" className={classes.copyright}>&#169;2021 Kazunobu Someya</Typography>
+      <Grid container>
+        <Typography variant="h3" align="center" className={classes.copyright}>&#169;2021 Kazunobu Someya</Typography>
+      </Grid>
     </Container>
   )
 }
