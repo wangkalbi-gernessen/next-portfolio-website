@@ -97,9 +97,9 @@ const Projects = () => {
       <Typography align="center" gutterBottom="true" variant="h3" className={classes.title}>PROJECTS</Typography>
       <Typography align="center" gutterBottom="true" variants="h2" style={{fontSize:"45px", textDecoration: "underline", paddingTop: "50px", }}>Web Projects</Typography>
       {/* Web project area */}
-      <Grid container spacing={16}  justify="space-evenly">
+      <Grid container style={{width: "90%", margin: "0 auto"}} spacing={4}>
         { webs.map ((web) => (
-        <Grid item xs={12} sm={6} md={3} lg={3} id={web.id} style={{marginBottom: "30px"}}>
+        <Grid item xs={12} sm={12} md={4} lg={4} id={web.id} style={{marginBottom: "30px"}}>
           <Card className={classes.webCard}>
             <CardMedia image={web.image} className={classes.images} />
             <CardHeader title={web.title} titleTypographyProps={{variant: "h4"}} style={{textAlign: "center"}} />
@@ -133,9 +133,9 @@ const Projects = () => {
       </Grid>
       {/* Mobile project area */}
       <Typography align="center" gutterBottom="true" variants="h1" style={{fontSize:"45px", textDecoration: "underline", marginTop: "100px"}}>Mobile Projects</Typography>
-      <Grid container spacing={16}  justify="space-evenly">
+      <Grid container style={{width: "90%", margin: "0 auto"}} spacing={4}>
         { mobiles.map ((mobile) => (
-        <Grid item xs={12} sm={6} md={3} lg={3} id={mobile.id} style={{marginBottom: "30px"}}>
+        <Grid item xs={12} sm={12} md={4} lg={4} id={mobile.id} style={{marginBottom: "30px"}}>
           <Card>
             <CardMedia image={mobile.image} className={classes.images}/>
             <CardHeader title={mobile.title} titleTypographyProps={{variant: "h4"}}  style={{textAlign: "center"}}/>
