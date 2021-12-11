@@ -7,6 +7,7 @@ const useStyle = makeStyles(theme =>({
     margin: 0,
     padding: 0,
     minWidth: "100%",
+    minHeight: "100%",
     background: "white"
   },
   avatar: {

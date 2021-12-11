@@ -4,11 +4,11 @@ import Progressbar from './Progressbar';
 
 const useStyles = makeStyles({
   content: {
-    minHeight: "100vh",
-    minWidth: "100%",
-    backgroundColor: "#fff",
+    margin: 0,
     padding: 0,
-    margin: 0
+    minWidth: "100%",
+    minHeight: "100%",
+    backgroundColor: "#fff"
   },
   title: {
     fontWeight: "700",
