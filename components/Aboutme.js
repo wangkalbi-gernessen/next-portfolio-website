@@ -7,9 +7,9 @@ import Skills from './Skills';
 const useStyle = makeStyles({
   content: {
     margin: 0,
-    padding: 0,
+    padding: "20px",
     minWidth: "100vw",
-    minHeight: "70vh",
+    minHeight: "80vh",
     background: "white"
   },
   title: {
@@ -33,17 +33,19 @@ const useStyle = makeStyles({
 const Aboutme = () => {
   const classes = useStyle();
   return(
-    <Container className={classes.content} id="aboutme">
-      <Typography align="center" variant="h3" className={classes.title}>About Me</Typography>
-      <Grid container alignItems="flex-start">
-        <Grid item xs={12} sm={6} >
-          <Profile/>  
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Skills/>
+    <Grid container className={classes.content} id="aboutme">
+      <Grid item xs={12} sm={12} md={12} xl={12} lg={12}>
+        <Typography align="center" variant="h3" className={classes.title}>About Me</Typography>
+        <Grid container>
+          <Grid item xs={12} sm={12} md={6} xl={6} lg={6}>
+            <Profile/>  
+          </Grid>
+          <Grid item xs={12} sm={12} md={6} xl={6} lg={6}>
+            <Skills/>
+          </Grid>
         </Grid>
       </Grid>
-    </Container>
+    </Grid>
   );
 }
 

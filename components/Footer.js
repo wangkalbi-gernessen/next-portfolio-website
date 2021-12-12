@@ -3,13 +3,12 @@ import { Typography, Container, Grid } from '@material-ui/core';
 
 const useStyles = makeStyles({
   footer: {
-    width: '100%',
+    width: '100vw',
     bottom: 0,
     right: 0,
     height: '100%',
     position: 'relative',
     backgroundColor: "#FFFFFF",
-    paddingTop: "45px"
   },
   copyright: {
     fontWeight: "700"
@@ -19,11 +18,11 @@ const useStyles = makeStyles({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <Container className={classes.footer}>
-      <Grid container>
-        <Typography variant="h3" align="center" className={classes.copyright}>&#169;2021 Kazunobu Someya</Typography>
+    <Grid container className={classes.footer}>
+      <Grid item xs={12}>
+        <Typography variant="h4" align="center" className={classes.copyright}>&#169;2021 Kazunobu Someya</Typography>
       </Grid>
-    </Container>
+    </Grid>
   )
 }
 

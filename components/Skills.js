@@ -4,7 +4,7 @@ import Progressbar from './Progressbar';
 
 const useStyles = makeStyles({
   content: {
-    margin: 0,
+    margin: "0 auto",
     padding: 0,
     minWidth: "100%",
     minHeight: "100%",
@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   },
   title: {
     fontWeight: "700",
-    paddingTop: "30px"
+    paddingTop: "20px"
   }, 
   skills: {
     width: "100%",
@@ -43,47 +43,51 @@ const Skills = () => {
   ];
 
   return (
-    <Grid spacing={0} container direction="column" justify="center" alignItems="center"className={classes.content} id="skills">
-      <Typography align="center"  gutterBottom="true" variant="h3" className={classes.title}>Skills</Typography>
-      <Grid item xs={11}>
-        <Paper elevation={5}>
-          <Container className={classes.skills}>
-            <Typography align="center" variant="h5" gutterBottom="true" style={{paddingTop: "10px", textDecoration: "underline", fontWeight: "bold"}}>Web Technologies</Typography>
-            { webSkills.map((webSkill) => (
-            <Grid container spacing={2}>
-              <Grid item xs={2}>
-                <Image src={webSkill.image} width={20} height={20}/>
-              </Grid>
-              <Grid item xs={10}>
-                <Progressbar bgcolor="orange" progress={webSkill.progress} height={20}/>
-              </Grid>
-            </Grid>
-            ))}
-            <Typography align="center" variant="h5" gutterBottom="true" style={{paddingTop: "5px", textDecoration: "underline", fontWeight: "bold"}}>Mobile Technologies</Typography>
-            { mobileSkills.map((mobileSkill) => (
-            <Grid container spacing={2}>
-              <Grid item xs={2}>
-                <Image src={mobileSkill.image} width={20} height={20}/>
-              </Grid>
-              <Grid item xs={10}>
-                <Progressbar bgcolor="yellow" progress={mobileSkill.progress} height={20}/>
-              </Grid>
-            </Grid>
-            ))}
-            <Typography align="center" variant="h5" gutterBottom="true" style={{ textDecoration: "underline", fontWeight: "bold"}}>Tools</Typography>
-            { toolSkills.map((toolSkill) => (
-            <Grid container spacing={2}>
-              <Grid item xs={2}>
-                <Image src={toolSkill.image} width={20} height={20}/>
-              </Grid>
-              <Grid item xs={10}>
-                <Progressbar bgcolor="skyblue" progress={toolSkill.progress} height={20}/>
-              </Grid>
-            </Grid>
-            ))}
-          </Container>
-        </Paper>
-      </Grid> 
+    <Grid spacing={0} container alignItems="flex-start" className={classes.content} id="skills">
+      <Grid item xs={12}>
+        <Typography align="center" variant="h3" className={classes.title}>Skills</Typography>
+        <Grid container direction="column" justify="center" alignItems="center"> 
+          <Grid item xs={12}>
+            <Paper elevation={5}>
+              <Container className={classes.skills}>
+                <Typography align="center" variant="h5" gutterBottom="true" style={{paddingTop: "10px", textDecoration: "underline", fontWeight: "bold"}}>Web Technologies</Typography>
+                { webSkills.map((webSkill) => (
+                <Grid container spacing={2}>
+                  <Grid item xs={2}>
+                    <Image src={webSkill.image} width={20} height={20}/>
+                  </Grid>
+                  <Grid item xs={10}>
+                    <Progressbar bgcolor="orange" progress={webSkill.progress} height={20}/>
+                  </Grid>
+                </Grid>
+                ))}
+                <Typography align="center" variant="h5" gutterBottom="true" style={{paddingTop: "5px", textDecoration: "underline", fontWeight: "bold"}}>Mobile Technologies</Typography>
+                { mobileSkills.map((mobileSkill) => (
+                <Grid container spacing={2}>
+                  <Grid item xs={2}>
+                    <Image src={mobileSkill.image} width={20} height={20}/>
+                  </Grid>
+                  <Grid item xs={10}>
+                    <Progressbar bgcolor="yellow" progress={mobileSkill.progress} height={20}/>
+                  </Grid>
+                </Grid>
+                ))}
+                <Typography align="center" variant="h5" gutterBottom="true" style={{ textDecoration: "underline", fontWeight: "bold"}}>Tools</Typography>
+                { toolSkills.map((toolSkill) => (
+                <Grid container spacing={2}>
+                  <Grid item xs={2}>
+                    <Image src={toolSkill.image} width={20} height={20}/>
+                  </Grid>
+                  <Grid item xs={10}>
+                    <Progressbar bgcolor="skyblue" progress={toolSkill.progress} height={20}/>
+                  </Grid>
+                </Grid>
+                ))}
+              </Container>
+            </Paper>
+          </Grid> 
+        </Grid>
+      </Grid>
     </Grid>     
   );
 }
