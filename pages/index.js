@@ -20,26 +20,12 @@ export default function Home() {
   const classes = useStyle();
   return (
     <Container className={classes.content}>
-      <Grid container>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
-          <Navbar />
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
-          <Main />
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
-          <Aboutme />
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
-          <Projects />
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
-          <Contact />
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} >
-          <Footer />
-        </Grid>
-      </Grid>
+      <Navbar />
+      <Main />
+      <Aboutme />
+      <Projects />
+      <Contact />
+      <Footer />
     </Container>
   )
 }

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-scroll';
 import { makeStyles } from '@material-ui/styles';
-import { Grid, AppBar, Toolbar, Tabs, Tab } from '@material-ui/core';
+import { Container, AppBar, Toolbar, Tabs, Tab } from '@material-ui/core';
 
 const useStyles = makeStyles({
   navbar: {
-    width: '100%',
+    minWidth: '100vw',
     position: '-webkit-sticky', /* Safari */
     position: 'sticky',
     background: "transparent",
@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     opacity: "0.8"
   }, 
   navChange: {
-    width: '100%',
+    minWidth: '100vw',
     position: '-webkit-sticky', /* Safari */
     position: 'sticky',
     backgroundColor: 'black',
@@ -63,20 +63,18 @@ const Navbar = () => {
   }, [colorChange]);
   
   return(
-    <Grid container spacing={40} className={colorChange ? classes.navChange : classes.navbar}>
-      <Grid item xs={12}>
-        <AppBar position="static" style={{background: "transparent", boxShadow: "none"}}>
-          <Toolbar>
-            <Tabs variant="scrollable" scrollButtons="on" textColor="secondary">
-              <Tab component={Link} to="main" className={classes.original} activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label={<span className={classes.tabLabel}>HOME</span>}/>
-              <Tab component={Link} to="aboutme" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label={<span className={classes.tabLabel}>ABOUT ME</span>} />
-              <Tab component={Link} to="projects" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label={<span className={classes.tabLabel}>PROJECTS</span>} />
-              <Tab component={Link} to="contact" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label={<span className={classes.tabLabel}>CONTACT</span>} />
-            </Tabs>
-          </Toolbar>
-        </AppBar>
-      </Grid>
-    </Grid>
+    <Container className={colorChange ? classes.navChange : classes.navbar}>
+      <AppBar position="static" style={{background: "transparent", boxShadow: "none"}}>
+        <Toolbar>
+          <Tabs variant="scrollable" scrollButtons="on" textColor="secondary">
+            <Tab component={Link} to="main" className={classes.original} activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label={<span className={classes.tabLabel}>HOME</span>}/>
+            <Tab component={Link} to="aboutme" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label={<span className={classes.tabLabel}>ABOUT ME</span>} />
+            <Tab component={Link} to="projects" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label={<span className={classes.tabLabel}>PROJECTS</span>} />
+            <Tab component={Link} to="contact" className={classes.original}activeClass="active" spy={true} smooth={true} offset={-70} duration={500} label={<span className={classes.tabLabel}>CONTACT</span>} />
+          </Tabs>
+        </Toolbar>
+      </AppBar>
+    </Container>
   );
 }
 

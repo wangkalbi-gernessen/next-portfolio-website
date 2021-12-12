@@ -9,7 +9,7 @@ const useStyle = makeStyles({
     margin: 0,
     padding: 0,
     minWidth: "100vw",
-    minHeight: "80vh",
+    minHeight: "70vh",
     background: "white"
   },
   title: {
