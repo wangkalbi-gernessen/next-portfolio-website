@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 const Main = () => {
   const classes = useStyles();
   const [text, setText] = useState("");
-  const [fullText, setFullText] = useState("I am a Full Stack Web Developer.");
+  const [fullText, setFullText] = useState("Full-stack Developer");
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
