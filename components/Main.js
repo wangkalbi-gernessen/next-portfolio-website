@@ -36,7 +36,7 @@ const Main = () => {
   return (
     <Grid container spacing={0}direction="row" alignItems="center" justify="center" className={classes.mainContent} id="main">
       <Grid item xs={11}>
-        <Typography align="center" variant="h2" className={classes.textContent}>Hello, I'm <span style={{color: "red"}}>Kazunobu Someya</span>.</Typography>
+        <Typography align="center" variant="h2" className={classes.textContent}>I'm <span style={{color: "red"}}>Kazunobu Someya</span>.</Typography>
         <Typography align="center" variant="h3" style={{color: "white"}}>{text}</Typography>
       </Grid>   
     </Grid>
