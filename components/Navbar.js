@@ -34,6 +34,7 @@ const useStyles = makeStyles({
     backgroundColor: "transparent",
     color: "#FFFFFF",
     textDecoration: "none",
+    padding: 0,
     '&:hover, &:active': {
       color: "#95bcf0",
       paddingBottom: "0.25rem",

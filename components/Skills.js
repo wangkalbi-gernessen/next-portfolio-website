@@ -12,7 +12,8 @@ const useStyles = makeStyles({
   },
   title: {
     fontWeight: "700",
-    paddingTop: "20px"
+    paddingTop: "20px",
+    paddingBottom: "20px"
   }, 
   skills: {
     width: "100%",
@@ -45,7 +46,7 @@ const Skills = () => {
   return (
     <Grid spacing={0} container alignItems="flex-start" className={classes.content} id="skills">
       <Grid item xs={12}>
-        <Typography align="center" variant="h3" className={classes.title}>Skills</Typography>
+        <Typography align="center" variant="h4" className={classes.title}>Skills</Typography>
         <Grid container direction="column" justify="center" alignItems="center"> 
           <Grid item xs={12}>
             <Paper elevation={5}>

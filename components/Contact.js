@@ -11,7 +11,8 @@ const useStyle = makeStyles({
     padding: 0,
     minWidth: "100vw",
     minHeight: "30vh",
-    background: "white"
+    background: "#081183",
+    color: "#fff",
   }, 
   title: {
     fontWeight: "700",
@@ -47,23 +48,23 @@ const Contact = () => {
       <Typography variant="h3" align="center" className={classes.title}>Contact</Typography>
       <Typography align="center" style={{fontSize: "25px", marginTop: "25px"}}>Thanks for taking your time to reach out.</Typography>
       <Typography align="center" style={{fontSize: "25px"}}>How can I help you today?</Typography>
-      <Grid container style={{marginTop: "80px"}}>
-        <Grid item xs={6} sm={6} md={3} lg={3} xl={3} style={{textAlign: "center"}}>
+      <Grid container style={{ padding: "40px 0" }}>
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3} style={{textAlign: "center"}}>
           <IconButton href="https://github.com/wangkalbi-gernessen" target="_blank" className={classes.btn}>
             <GitHubIcon className={classes.images} />
           </IconButton>
         </Grid>
-        <Grid item xs={6} sm={6} md={3} lg={3} xl={3} style={{textAlign: "center"}}>
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3} style={{textAlign: "center"}}>
           <IconButton href="https://www.linkedin.com/in/kazunobu-someya-6b44901b6/" target="_blank" className={classes.btn}>
             <LinkedInIcon className={classes.images} />
           </IconButton>
         </Grid>
-        <Grid item xs={6} sm={6} md={3} lg={3} xl={3} style={{textAlign: "center"}}>
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3} style={{textAlign: "center"}}>
           <IconButton href={`mailto: guizhou08chishui@gmail.com`} target="_blank" className={classes.btn}>
             <EmailIcon className={classes.images} />
           </IconButton>
         </Grid>
-        <Grid item xs={6} sm={6} md={3} lg={3} xl={3} style={{textAlign: "center"}}>
+        <Grid item xs={3} sm={3} md={3} lg={3} xl={3} style={{textAlign: "center"}}>
           <IconButton href={`tel: 778-689-7760`} target="_blank" className={classes.btn}>
             <CallIcon className={classes.images} />
           </IconButton>

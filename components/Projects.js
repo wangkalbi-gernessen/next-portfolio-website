@@ -95,7 +95,7 @@ const Projects = () => {
   return (
     <Container className={classes.content} id="projects">
       <Typography align="center" gutterBottom="true" variant="h3" className={classes.title}>PROJECTS</Typography>
-      <Typography align="center" gutterBottom="true" variants="h2" style={{fontSize:"45px", textDecoration: "underline", paddingTop: "50px", }}>Web Projects</Typography>
+      <Typography align="center" gutterBottom="true" variant="h4" style={{textDecoration: "underline", paddingTop: "50px", }}>Web Projects</Typography>
       {/* Web project area */}
       <Grid container style={{width: "90%", margin: "0 auto"}} spacing={4}>
         { webs.map ((web) => (
@@ -132,7 +132,7 @@ const Projects = () => {
       </Modal> */}
       </Grid>
       {/* Mobile project area */}
-      <Typography align="center" gutterBottom="true" variants="h1" style={{fontSize:"45px", textDecoration: "underline", marginTop: "100px"}}>Mobile Projects</Typography>
+      <Typography align="center" gutterBottom="true" variant="h4" style={{textDecoration: "underline", marginTop: "100px"}}>Mobile Projects</Typography>
       <Grid container style={{width: "90%", margin: "0 auto"}} spacing={4}>
         { mobiles.map ((mobile) => (
         <Grid item xs={12} sm={12} md={4} lg={4} xl={6} id={mobile.id} style={{marginBottom: "30px"}}>
