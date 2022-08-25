@@ -81,8 +81,8 @@ const Projects = () => {
     },
     {id: 2, title: "Black Jack", content: "Java, JavaFX", source: "GitHub", sourceHref: "https://github.com/YumiMachino/Black-Jack", image: "/blackjack.png", language: "Java", library: "JavaFX"
     },
-    {id: 3, title: "First German Delivery System", content: "PHP, MySQL, CSS", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/FirstGermanDeliverySystem", image: "/css.png", language: "PHP, MySQL",
-    }
+    // {id: 3, title: "First German Delivery System", content: "PHP, MySQL, CSS", source: "GitHub", sourceHref: "https://github.com/wangkalbi-gernessen/FirstGermanDeliverySystem", image: "/css.png", language: "PHP, MySQL",
+    // }
   ];
 
   const mobiles = [
