@@ -46,8 +46,8 @@ const Contact = () => {
   return(
     <Container className={classes.content} id="contact">
       <Typography variant="h3" align="center" className={classes.title}>Contact</Typography>
-      <Typography align="center" style={{fontSize: "25px", marginTop: "25px"}}>Thanks for taking your time to reach out.</Typography>
-      <Typography align="center" style={{fontSize: "25px"}}>How can I help you today?</Typography>
+      <Typography align="center" style={{fontSize: "20px", marginTop: "25px", padding: "0 5px"}}>Thanks for taking your time to reach out.</Typography>
+      <Typography align="center" style={{fontSize: "20px", padding: "0 5px"}}>How can I help you today?</Typography>
       <Grid container style={{ padding: "40px 0" }}>
         <Grid item xs={3} sm={3} md={3} lg={3} xl={3} style={{textAlign: "center"}}>
           <IconButton href="https://github.com/wangkalbi-gernessen" target="_blank" className={classes.btn}>
